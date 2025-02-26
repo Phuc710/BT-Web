@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/b_12.css">
+    <title>Phiếu đăng ký</title>
+</head>
+<body>
+    <form action="" method="post">
+        <h1>Phiếu đăng ký tham gia chương trình khuyến mãi</h1>
+        <table border="1" style="width: 100%;height: auto;">
+            <tr>
+                <td><label for="fullname">Fullname</label></td>
+                <td><input type="text" style="width: 80%; float: left;" id="fullname" required></td>
+            </tr>
+            <tr>
+                <td><label for="address">Address</label></td>
+                <td><input type="text" style="width: 60%;float: left;" id="address" required></td>
+            </tr>
+            <tr>
+                <td><label for="phone">Phone number</label></td>
+                <td><input type="text" style="width: 50%;float: left;" id="phone" required></td>
+            </tr>
+            <tr>
+                <td style="width: 25vh;"><label for="Sex">Sex</label></td>
+                <td><input type="radio" name="Sex" id="Sex" value="Nam" checked> Nam
+                    <input type="radio" name="Sex" id="Sex" value="Nữ"> Nữ
+                </td>
+            </tr>
+            <tr>
+                <td><label for="drop">Nghề Nghiệp</label></td>
+                <td><select name="drop" id="drop">
+                    <option value="Chọn">Giao Viên</option>
+                    <option value="Chọn" selected>Tài Xế</option>
+                    <option value="Chọn">IT</option>
+                    <option value="Chọn">Doctor</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td><label for="drops">Chọn sản phẩm tham gia</label></td>
+                <td><select name="drops" id="drops" size="4" multiple >
+                    <option value="1" selected>Kem đánh răng</option>
+                    <option value="2" >Bột giặt</option>
+                    <option value="3" >Dầu gọi đầu</option>
+                    <option value="4" >Sữa tắm</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td><label for="john">Số người dự đoán tham gia</label></td>
+                <td><input type="number" ></td>
+            </tr>
+            <tr> 
+                <td class="nut" colspan="2"><input type="button" value="Đồng Ý"></td>
+            </tr>
+            
+        </table>
+    </form>
+</body>
+</html>

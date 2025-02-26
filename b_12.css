@@ -1,0 +1,27 @@
+h1{
+    color: darkgreen;
+}
+body{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-weight: bold;
+}
+table{
+    background-color: aquamarine;
+    border-radius: 3px;
+    border-collapse: collapse;
+    
+
+}
+option{
+    color: black;
+}
+
+.nut{
+    align-items: center;
+    height: 30px;
+}
+label{
+    width:40px;
+    height: 10px;
+}
