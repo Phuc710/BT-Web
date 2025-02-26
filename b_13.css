@@ -1,0 +1,22 @@
+h1{
+    color: cadetblue;
+    text-align: center;
+}
+td{
+    color: darkcyan;
+}
+table{
+    background-color: blanchedalmond;
+    margin: 10px auto;
+    border-collapse: collapse;
+    border-color: aqua;
+    
+}
+td{
+    height: 4vh;
+    width: 20vh;
+    font-size: 20px;
+}
+input{
+    height: 2.5vh;
+}
