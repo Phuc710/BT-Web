@@ -1,0 +1,25 @@
+
+img {
+transition: 2s;
+  width: 50%;
+  float: left;
+  height:50%;
+}
+
+input:checked ~ img {
+    opacity: 0;
+  /* display: none; */
+  /* visibility:hidden ; */
+}
+#line{
+    color: violet;
+    font-size: 50px;
+}
+body {
+  background: #000;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; 
+}
