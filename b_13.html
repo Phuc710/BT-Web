@@ -22,7 +22,7 @@
             </tr>
             <tr>
                 <td><label for="sdt">Phone number</label></td>
-                <td><input type="text" id="sdt"></td>
+                <td><input type="text" id="sdt" pattern="[0-9]{10}" title="nhap 10 so" required></td>
             </tr>
             <tr>
                 <td><label for="vn">Khách Việt Nam</label></td>
@@ -62,9 +62,7 @@
             <tr>
                 <td colspan="2" align="center" style="width: 80vh;">
                 <fieldset style="border: 1; width: 350px; height: 55px;">
-                    <legend  style="font-style: italic;color: darkgoldenrod;">
-                        Số lượng đoàn khách
-                    </legend>
+                    <legend  style="font-style: italic;color: darkgoldenrod;"> Số lượng đoàn khách </legend>
                     <label for="lon">Người lớn</label>
                     <input type="number" id="lon" style="width: 40px;">
                     <label for="em">Trẻ em</label>

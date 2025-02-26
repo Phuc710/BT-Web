@@ -9,7 +9,7 @@
 <body>
     <form action="" method="post">
         <h1>Phiếu đăng ký tham gia chương trình khuyến mãi</h1>
-        <table border="1" style="width: 100%; height: auto;" id="registrationTable">
+        <table border="1" style="width: 100%; height: auto;" id="table">
             <tr>
                 <td><label for="fullname">Fullname</label></td>
                 <td><input type="text" style="width: 80%; float: left;" id="fullname" required></td>
@@ -20,7 +20,7 @@
             </tr>
             <tr>
                 <td><label for="phone">Phone number</label></td>
-                <td><input type="text" style="width: 50%; float: left;" id="phone" required></td>
+                <td><input type="text" style="width: 50%; float: left;" id="phone" pattern="[0-9]{10}" title="SDT 10 số" required></td>
             </tr>
             <tr>
                 <td style="width: 25vh;"><label for="Sex">Sex</label></td>
@@ -76,7 +76,7 @@
             const participants = document.getElementById("participants").value;
 
             // Tạo một dòng mới trong bảng để hiển thị thông báo
-            const table = document.getElementById("registrationTable");
+            const table = document.getElementById("table");
             const newRow = table.insertRow(-1); // Thêm dòng mới ở cuối bảng
             const newCell = newRow.insertCell(0); // Thêm ô mới
             newCell.colSpan = 2; // Gộp 2 cột
