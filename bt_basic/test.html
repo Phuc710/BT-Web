@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bố cục với Section và Aside</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        main {
+            flex: 2;
+        
+            padding: 20px;
+            margin: 40px;
+            background-color: #f9f9f9;
+        }
+        aside {
+            flex: 1;
+            padding: 20px;
+            background-color: #e0e0e0;
+        }
+        section {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .hinh_tron {
+width: 200px;
+height: 200px;
+background-color: #ff0080;
+border-radius: 50%;
+-moz-border-radius:0%;
+-webkit-border-radius: 50%;
+}
+    .box{
+        width: 300px;
+        height: 200px;
+        border: 20px solid #ff0080;
+        padding-left: 20px;
+        border-style: dashed;
+    }
+   /* Bao ngoài để căn giữa */
+
+
+/* Style cho nút */
+a {
+    min-width: 80px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    color: white;
+    background-color: #1473e6;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    margin: 10px 5px;
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <aside>
+        <h3>Tin liên quan</h3>
+        <ul>
+            <li><a href="#">Bài viết nổi bật 1</a></li>
+            <li><a href="#">Bài viết nổi bật 2</a></li>
+            <li><a href="#">Bài viết nổi bật 3</a></li>
+        </ul>
+    
+        <h3>Quảng cáo</h3>
+        <p>Một số quảng cáo hoặc banner có thể được đặt ở đây.</p>
+    </aside>
+
+<main>
+    <section>
+        <h2>Phần 1 - Giới thiệu</h2>
+        <p>Chào mừng bạn đến với trang web của chúng tôi. Đây là phần giới thiệu tổng quan.</p>
+    </section>
+
+    <section>
+        <h2>Phần 2 - Nội dung chính</h2>
+        <p>Nội dung chính của trang web sẽ được trình bày tại đây, chia thành các section nhỏ.</p>
+    </section>
+
+    <section>
+        <h2>Phần 3 - Kết luận</h2>
+        <p class="box">Đây là phần kết luận của bài viết.</p>
+        <div class="button-container">
+            <a href="#">Nút Bấm Đẹp</a>
+            <a href="#">Nút Bấm Đẹp</a>
+            <div class="parent" style="position: relative; width: 300px; height: 300px; background: lightblue;">
+                <div class="child" style="position: absolute; top: 50px; left: 50px; width: 300px; height: 100px; background: coral;">
+                    Absolute Box
+                </div>
+            </div>
+            
+        </div>
+        
+
+    </section>
+</main>
+
+
+<div class="hinh_tron"></div>
+</body>
+</html>
