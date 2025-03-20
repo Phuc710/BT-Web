@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        * {
+            border-color: black;
+            font-size: 18px;
+            margin-top: 5px;
+        }
+
+        form {
+            font-size: 15px;
+        }
+
+        input {
+            height: 30px;
+            width: 100%;
+        }
+
+        input:hover {
+            background-color: yellow;
+            border: 2px solid orange;
+        }
+
+        fieldset {
+            display: inline-flex;
+            width: 98%;
+            border: 1px solid black;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        legend {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input, textarea {
+            border-radius: 5px;
+        }
+
+        textarea {
+            height: 200px;
+            width: 100%;
+            border: 2px solid black;
+        }
+
+        .group {
+            display: flex;
+            align-items: center;
+        }
+
+        .group label {
+            display: flex;
+            align-items: center;
+            padding-right: 15px;
+            gap: 10px;
+        }
+
+        .group input[type="checkbox"] {
+            width: 20px;
+            margin: 0;
+        }
+        button {
+            background: radial-gradient(circle, #ffffff, #6666ff);
+            color: orange;
+            font-weight: bold;
+            border: none;
+            border-radius: 25px;
+            height: 40px;
+            width: 100px;
+            cursor: pointer;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <div class="box">
+            <label>Họ và Tên</label>
+            <input type="text" placeholder="Họ và Tên">
+        </div>
+
+        <fieldset>
+            <legend>Giới tính: </legend>
+            <div class="group">
+                <input type="radio" name="sex" id="male"><label for="male">Nam</label>
+                <input type="radio" name="sex" id="female"><label for="female">Nữ</label>
+            </div>
+        </fieldset>
+
+        <div class="box">
+            <label for="date">Ngày Sinh</label><br>
+            <input type="date" name="date" id="date">
+        </div>
+
+        <div class="box">
+            <label for="diem">Điểm</label>
+            <input type="number" step="0.25" name="" id="diem" placeholder="Điểm">
+        </div>
+
+        <div class="box">
+            <label for="job">Nghề Nghiệp</label><br>
+            <input type="text" name="" id="job" placeholder="Job">
+        </div>
+
+        <fieldset>
+            <legend>SỞ THÍCH: </legend>
+            <div class="group">
+                <label><input type="checkbox" name="hobby" id="the-thao"> THỂ THAO</label>
+                <label><input type="checkbox" name="hobby" id="du-lich"> DU LỊCH</label>
+                <label><input type="checkbox" name="hobby" id="am-nhac"> ÂM NHẠC</label>
+            </div>
+        </fieldset>        
+
+        <div class="box">
+            <label for="note">Ghi Chú</label><br>
+            <textarea name="note" id="note" placeholder="Write Something ..."></textarea>
+        </div>
+        <div class="nut">
+            <button>Thêm</button>
+            <button>Sửa</button>
+            <button style="background: radial-gradient(circle, #ffffff, #777777); color: grey;">Xoá</button>
+        </div>
+    </form>
+</body>
+
+</html>
