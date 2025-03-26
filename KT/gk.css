@@ -1,0 +1,115 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+    background-color: black;
+}
+
+/* Khung chính */
+.khung {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Logo */
+.logo img {
+    height: 60px;
+}
+
+/* Menu */
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.khung a:hover{
+    color:peru
+}
+/* Thanh tìm kiếm */
+.search-box {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    width: 150px;
+}
+
+.search-box button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Đăng nhập */
+.right-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Giỏ hàng */
+.giohang a {
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Banner */
+.banner {
+    background: url('/image/gunbanner.jpg') no-repeat center;
+    background-size: cover;
+    height: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner h1 {
+    color: rgb(83, 212, 247);
+    font-size: 2em;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+/* Chữ chạy ngang */
+marquee {
+    background-color: #ffcc00;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+
+/* Footer */
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
