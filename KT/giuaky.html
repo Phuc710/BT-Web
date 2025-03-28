@@ -25,6 +25,15 @@
                         <a href="#sanpham">Sản Phẩm</a>
                         <ul class="dropdown-menu">
                             <li class="sub-dropdown">
+                                <a href="#hot">HOT</a>
+                                <ul class="sub-menu">
+                                    <li><a href="#ak47">AK-47</a></li>
+                                    <li><a href="#m4a1">M4A1-S</a></li>
+                                    <li><a href="#aug">AUG</a></li>
+                                    <li><a href="#scar">SCAR-20</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
                                 <a href="#sungtruong">Súng Trường</a>
                                 <ul class="sub-menu">
                                     <li><a href="#ak47">AK-47</a></li>
@@ -94,9 +103,9 @@
                 <button id="search-btn" type="button">🔍</button>
             </div>
             <div class="right-menu">
-                <a href="/WEBLOR/login.html">SIGN IN</a>
-                <a href="/WEBLOR/login.html" style="padding: 10px;background-color: rgba(0, 187, 249, 0.648);border-radius: 15px;">SIGN
-                    UP</a>
+                <a href="/KT/login.html">SIGN IN</a>
+                <a href="/KT/sign up.html"
+                    style="padding: 10px;background-color: rgba(0, 187, 249, 0.648);border-radius: 15px;">SIGN UP</a>
             </div>
             <div class="giohang">
                 <a href="#" class="cart">GIỎ HÀNG / <span>0 đ</span> 🛒</a>
@@ -108,7 +117,7 @@
     <!-- TRANG CHU -->
     <div class="banner" id="trangchu">
         <h1>Chào mừng bạn đến với BeeGun</h1>
-        <button type="button">Mua Ngay</button>
+        <a href="#mua">Mua Ngay</a>
     </div>
     <marquee behavior="scroll" direction="left">
         🔥 Khuyến mãi đặc biệt hôm nay - Giảm giá lên đến 50%! 🔥
@@ -116,50 +125,101 @@
     <p id="hotgun"></p>
 
     <!-- SAN PHAM -->
-    <!-- HOT SELLER -->
+    <!-- SALE -->
     <div class="tong">
         <div class="tonghotsell">
-            <div class="tieude">
-                <h2 style="color: yellow; padding-top: 20px; font-size: 60px;"><span><img src="/image/sale.png" alt=""
-                            style="height: 60px;width: 60px;"></span> Flash Sale
-                    <span><img src="/image/sale.png" alt="" style="height: 60px;width: 60px;"></span>
-                </h2>
+            <div class="tieude1">
+                <h2><span><img src="/image/sale.png" alt=""></span> Flash Sale <span><img src="/image/sale.png"alt=""></span> </h2>
             </div>
-
             <div class="container">
                 <div class="item">
+                    <div class="flashsale-logo">
+                        <img src="/image/flashsale.png" alt="Hot Sale">
+                    </div>
                     <img src="/image/ak47.webp" alt="AK-47">
                     <h3>AK-47</h3>
-                    <p>Giá: 1.500.000đ</p>
+                    <p style="color: rgb(247, 237, 96);">Giá: 1.000.000đ<span class="discount"> -10%</span></p>
                     <button type="button">Mua Ngay</button>
                 </div>
                 <div class="item">
+                    <div class="flashsale-logo">
+                        <img src="/image/flashsale.png" alt="Hot Sale">
+                    </div>
                     <img src="/image/awp.webp" alt="AWP">
                     <h3>AWP</h3>
-                    <p>Giá: 2.000.000đ</p>
+                    <p style="color: rgb(247, 237, 96);">Giá: 2.300.000đ <span class="discount"> -20%</span></p>
                     <button type="button">Mua Ngay</button>
                 </div>
                 <div class="item">
-                    <img src="/image/katana.jpg" alt="Katana">
+                    <div class="flashsale-logo">
+                        <img src="/image/flashsale.png" alt="Hot Sale">
+                    </div>
+                    <img src="/image/katana.png" alt="Katana">
                     <h3>Katana</h3>
-                    <p>Giá: 1.555.000đ</p>
+                    <p style="color: rgb(247, 237, 96);">Giá: 1.333.200đ <span class="discount"> -5%</span></p>
                     <button type="button">Mua Ngay</button>
                 </div>
                 <div class="item">
+                    <div class="flashsale-logo">
+                        <img src="/image/flashsale.png" alt="Hot Sale">
+                    </div>
                     <img src="/image/buom.webp" alt="Butterfly Knife">
                     <h3>P90</h3>
-                    <p>Giá: 3.200.000đ</p>
+                    <p style="color: rgb(247, 237, 96);">Giá: 2.789.000đ <span class="discount"> -13%</span></p>
+                    <button type="button">Mua Ngay</button>
+                </div>
+            </div>
+
+            <!-- HOT -->
+            <div class="tieude1">
+                <hr id="hot">
+                <h2 style="color: rgb(255, 0, 0);"><span><img src="/image/fire.png" alt=""></span> HOT <span><img src="/image/fire.png" alt=""></span> </h2>
+            </div>
+            <div class="container">
+                <div class="item">
+                    <div class="flashsale-logo">
+                        <img src="/image/hot.png" alt="Hot Sale">
+                    </div>
+                    <img src="/image/ak47.webp" alt="AK-47">
+                    <h3>AK-47</h3>
+                    <p style="color: rgb(247, 237, 96);">Giá: 1.000.000đ</p>
+                    <button type="button">Mua Ngay</button>
+                </div>
+                <div class="item">
+                    <div class="flashsale-logo">
+                        <img src="/image/hot.png" alt="Hot Sale">
+                    </div>
+                    <img src="/image/awp.webp" alt="AWP">
+                    <h3>AWP</h3>
+                    <p style="color: rgb(247, 237, 96);">Giá: 2.300.000đ</p>
+                    <button type="button">Mua Ngay</button>
+                </div>
+                <div class="item">
+                    <div class="flashsale-logo">
+                        <img src="/image/hot.png" alt="Hot Sale">
+                    </div>
+                    <img src="/image/katana.png" alt="Katana">
+                    <h3>Katana</h3>
+                    <p style="color: rgb(247, 237, 96);">Giá: 1.333.200đ</span></p>
+                    <button type="button">Mua Ngay</button>
+                </div>
+                <div class="item">
+                    <div class="flashsale-logo">
+                        <img src="/image/hot.png" alt="Hot Sale">
+                    </div>
+                    <img src="/image/buom.webp" alt="Butterfly Knife">
+                    <h3>P90</h3>
+                    <p style="color: rgb(247, 237, 96);">Giá: 2.789.000đ</span></p>
                     <button type="button">Mua Ngay</button>
                 </div>
             </div>
         </div>
 
+
+        <!-- SP -->
         <div class="tongsp" id="sanpham">
-            <div class="tieude">
-                <h2 style="color: rgb(249, 0, 0); padding-top: 20px; font-size: 60px"><span><img src="/image/sale.png" alt=""
-                            style="height: 60px;width: 60px;"></span> BEE GUNS
-                    <span><img src="/image/sale.png" alt="" style="height: 60px;width: 60px;"></span>
-                </h2>
+            <div class="tieude1" id="mua">
+                <h2><span><img src="/image/sale.png" alt=""></span> BEE GUNS <span><img src="/image/sale.png" alt=""></span></h2>
             </div>
             <div class="sp">
                 <div class="sidebar">
@@ -178,8 +238,8 @@
                 <div class="content">
 
                     <!-- SÚNG TRƯỜNG -->
-                    <h2 class="tieude" style="color: white;font-size: 30px;padding: 0 0 10px 0;">Súng trường</h2>
-                    <hr style="width: 80px; margin: 0 auto; border: 1px solid #ffffff; margin-bottom: 30px;">
+                    <h2 class="tieude">Súng trường</h2>
+                    <hr>
 
                     <div class="container">
                         <div class="item">
@@ -227,9 +287,8 @@
                     </div>
 
                     <!-- KNIFE -->
-                    <h2 class="tieude" style="color: white;font-size: 30px;padding: 50px 0 7px 0;">Knife</h2>
-                    <hr style="width: 80px; margin: 0 auto; border: 1px solid #ffffff; margin-bottom: 20px;">
-
+                    <h2 class="tieude">Knife</h2>
+                    <hr>
                     <div class="container">
                         <div class="item">
                             <img src="/image/ak47.webp" alt="AK-47" id="ak47">
@@ -280,11 +339,11 @@
                             <button type="button">Mua Ngay</button>
                         </div>
                     </div>
-                    
+
 
                     <!-- Súng Ngắm -->
-                    <h2 class="tieude" style="color: white;font-size: 30px;padding: 50px 0 7px 0;">Súng Ngắm</h2>
-                    <hr style="width: 80px; margin: 0 auto; border: 1px solid #ffffff; margin-bottom: 20px;">
+                    <h2 class="tieude">Súng Ngắm</h2>
+                    <hr>
 
                     <div class="container">
                         <div class="item">
@@ -324,11 +383,11 @@
                             <button type="button">Mua Ngay</button>
                         </div>
                     </div>
-                    
+
 
                     <!-- LUC -->
-                    <h2 class="tieude" style="color: white;font-size: 30px;padding: 50px 0 7px 0;">Súng Lục</h2>
-                    <hr style="width: 80px; margin: 0 auto; border: 1px solid #ffffff; margin-bottom: 20px;">
+                    <h2 class="tieude">Súng Lục</h2>
+                    <hr>
 
                     <div class="container">
                         <div class="item">
@@ -355,12 +414,12 @@
                             <p>Giá: 1.500.000đ</p>
                             <button type="button">Mua Ngay</button>
                         </div>
-                        
+
                     </div>
-                    
+
                     <!-- SMG -->
-                    <h2 class="tieude" style="color: white;font-size: 30px;padding: 50px 0 7px 0;">SMG</h2>
-                    <hr style="width: 80px; margin: 0 auto; border: 1px solid #ffffff; margin-bottom: 20px;">
+                    <h2 class="tieude">SMG</h2>
+                    <hr>
 
                     <div class="container">
                         <div class="item">
@@ -387,13 +446,11 @@
 
             <!-- PHỤ KIỆN -->
             <div class="tongsp" id="phukien">
-                <div class="tieude">
-                    <h2 style="color: rgb(249, 0, 0); padding-top: 20px;"><span><img src="/image/sale.png" alt=""
-                                style="height: 30px;width: 30px;"></span> Phụ Kiện
-                        <span><img src="/image/sale.png" alt="" style="height: 30px;width: 30px;"></span>
-                    </h2>
+                <div class="tieude1">
+                    <h2><span><img src="/image/sale.png" alt=""></span> Phụ Kiện <span><img src="/image/sale.png"
+                                alt=""></span></h2>
                 </div>
-                <div class="sp" >
+                <div class="sp">
                     <div class="sidebar">
                         <h2>Danh Mục</h2>
                         <ul>
@@ -403,13 +460,13 @@
                             <li><a href="#">Đèn Lazer</a></li>
                         </ul>
                     </div>
-    
+
                     <div class="content">
-    
+
                         <!-- Ông Ngắm -->
-                        <h2 class="tieude" style="color: white;font-size: 30px;padding: 0 0 10px 0;">Ông Ngắm</h2>
-                        <hr style="width: 80px; margin: 0 auto; border: 1px solid #ffffff; margin-bottom: 30px;">
-    
+                        <h2 class="tieude">Ông Ngắm</h2>
+                        <hr>
+
                         <div class="container">
                             <div class="item">
                                 <img src="/image/ak47.webp" alt="AK-47" id="ak47">
@@ -454,11 +511,11 @@
                                 <button type="button">Mua Ngay</button>
                             </div>
                         </div>
-    
+
                         <!-- Báng Súng -->
-                        <h2 class="tieude" style="color: white;font-size: 30px;padding: 50px 0 7px 0;">Báng Súng</h2>
-                        <hr style="width: 80px; margin: 0 auto; border: 1px solid #ffffff; margin-bottom: 20px;">
-    
+                        <h2 class="tieude">Báng Súng</h2>
+                        <hr>
+
                         <div class="container">
                             <div class="item">
                                 <img src="/image/ak47.webp" alt="AK-47" id="ak47">
@@ -509,12 +566,12 @@
                                 <button type="button">Mua Ngay</button>
                             </div>
                         </div>
-                        
-    
+
+
                         <!-- Nòng Giảm Thanh -->
-                        <h2 class="tieude" style="color: white;font-size: 30px;padding: 50px 0 7px 0;">Nòng Giảm Thanh</h2>
-                        <hr style="width: 80px; margin: 0 auto; border: 1px solid #ffffff; margin-bottom: 20px;">
-    
+                        <h2 class="tieude">Nòng Giảm Thanh</h2>
+                        <hr>
+
                         <div class="container">
                             <div class="item">
                                 <img src="/image/ak47.webp" alt="AK-47" id="ak47">
@@ -553,12 +610,12 @@
                                 <button type="button">Mua Ngay</button>
                             </div>
                         </div>
-                        
-    
+
+
                         <!-- Đèn Lazer -->
-                        <h2 class="tieude" style="color: white;font-size: 30px;padding: 50px 0 7px 0;">Đèn Lazer</h2>
-                        <hr style="width: 80px; margin: 0 auto; border: 1px solid #ffffff; margin-bottom: 20px;">
-    
+                        <h2 class="tieude">Đèn Lazer</h2>
+                        <hr>
+
                         <div class="container">
                             <div class="item">
                                 <img src="/image/ak47.webp" alt="AK-47" id="ak47">
@@ -584,9 +641,9 @@
                                 <p>Giá: 1.500.000đ</p>
                                 <button type="button">Mua Ngay</button>
                             </div>
-                            
+
                         </div>
-                           
+
                     </div>
                 </div>
 
@@ -595,7 +652,7 @@
 
 
 
-            <!-- <footer>
+                <!-- <footer>
                 <p>&copy; 2025 BeeGuns. Tất cả quyền lợi được bảo lưu.</p>
             </footer> -->
 

@@ -4,9 +4,20 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+html, body {
+    overflow-x: hidden;
+}
+hr{
+    margin: 20px 0;
+}
 
 header {
     background-color: black;
+}
+header a:hover {
+    background-color: rgba(43, 39, 35, 0.639);
+    padding: 10px;
+    border-radius: 15px;
 }
 
 .khung {
@@ -21,7 +32,6 @@ header {
 
 .logo img {
     height: 80px;
-    
 }
 
 nav ul {
@@ -128,18 +138,23 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
     margin-right: 10px;
+    padding: 10px;
 }
 
 .giohang a {
     color: red;
     text-decoration: none;
     font-weight: bold;
+    padding: 10px;
+    margin-right: 5px;
 }
-
+.giohang a:hover {
+    color: rgb(254, 123, 0);
+}
 .banner {
     background: url('/image/gunbanner.jpg') no-repeat center;
     background-size: cover;
-    height: 739px;
+    height: 723px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -156,7 +171,7 @@ nav ul li a {
     background-clip: text;
     color: transparent;
 }
-.banner button {
+.banner a {
     padding:  15px 30px;
     border: none;
     border-radius: 40px;
@@ -168,9 +183,10 @@ nav ul li a {
     cursor: pointer;
     transition: 0.3s;
     font-weight: bold;
+    text-decoration: none;
 
 }
-.banner button:hover {
+.banner a:hover {
     background-color: rgba(0, 166, 255, 0.628);
 }
 
@@ -178,26 +194,33 @@ marquee {
     background-color: #ffcc00;
     padding: 10px;
     height: 50px;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
     color: black;
 }
 .tonghotsell{
-    height: 700px;
+    height: 1200px;
     background: url(/image/hotsell.webp) no-repeat center;
     background-size: cover;
 }
-.tonghotsell {
-    background: url(/image/hotsell.webp) no-repeat center;
-    background-size: cover;
-    padding: 30px 0;
+.flashsale-logo{
+    position: absolute;
+    top: -90px;
+    right: -70px;
+    }
+.flashsale-logo img{
+    display: block;
+    padding: 65px;
+    transform: rotate(10deg);
 }
+
+
 
 .tieude {
     text-align: center;
-    color: white;
+    color: rgb(246, 1, 1);
     padding: 15px;
-    font-size: 24px;
+    font-size: 30px;
     font-weight: bold;
     border-radius: 8px;
 }
@@ -215,17 +238,23 @@ marquee {
 }
 
 .item {
-    background-color: white;
+    position: relative;
+    background: linear-gradient(to bottom, #221111, #000000);
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     padding: 15px;
     text-align: center;
     transition: transform 0.2s;
-    border: 1px solid #ddd;
+    border: 1px solid rgba(74, 2, 2, 0.1);
+    color: white;
 }
 
 .item:hover {
     transform: scale(1.03);
+    border: 1px solid rgba(121, 24, 24, 0.881);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s, box-shadow 0.2s, border 0.2s;
+    background: linear-gradient(to bottom, #000000, #221111);
 }
 
 .item img {
@@ -238,19 +267,25 @@ marquee {
 .item h3 {
     font-size: 20px;
     margin: 10px 0;
-    color: #333;
+    color: white;
 }
 
 .item p {
+    font-size: 20px;
+    color: #ff9d00;
+    font-weight: bold;
+}
+
+.item .discount {
+    color: red;
     font-size: 16px;
-    color: #e91e63;
     font-weight: bold;
 }
 
 .item button {
     padding: 10px 20px;
     border: none;
-    background-color: #ff5722;
+    background-color: rgba(0, 200, 255, 0.42);
     color: white;
     font-size: 16px;
     font-weight: bold;
@@ -262,41 +297,75 @@ marquee {
 
 .item button:hover {
     background-color: #d84315;
+    transform: scale(1.1);
+
 }
 
+.item button:active {
+    transform: scale(0.9);
+}
 
 .tongsp{
         background: url('/image/gunbackground.jpg') no-repeat center;
         background-size: cover;
-
+}
+.tieude1{
+    color: rgb(250, 247, 58); 
+    padding: 30px 0 30px 0; 
+    font-size: 40px;
+    text-align: center;
+}
+.tieude1 img{
+    height: 60px;
+    width: 60px;
 }
 .sp{
     display: flex;
     margin: auto;
     padding: 40px;
+    border-radius: 10px;
 }
 
 .sidebar {
-    background-color: rgba(0, 0, 0, 0.352);
+    background: linear-gradient(to bottom, #14141396, #2d19099c);
     text-align: center;
-    line-height: 2;
     color: white;
     flex: 1.5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s;
+}
+
+.sidebar h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: rgb(255, 4, 4);
 }
 .sidebar ul li {
     list-style: none;
-    padding-right: 30px;
+    padding: 10px 0;
+    transition: all 0.3s;
 }
-
-.sidebar a{
+.sidebar ul li a {
     text-decoration: none;
     color: white;
-    
+    font-size: 18px;
+    transition: all 0.3s;
 }
+.sidebar li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    transform: scale(1.1);
+}
+.sidebar li:hover a {
+    color: rgb(248, 124, 0);
+}
+
 .content{
     flex: 7;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.751);;
+    background-color: rgba(13, 11, 11, 0.664);;
 }
 
 
