@@ -1,62 +1,119 @@
-/* Reset CSS */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Header */
 header {
     background-color: black;
 }
 
-/* Khung chính */
 .khung {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
+    position: fixed;
+    background-color: black;    
 }
 
-/* Logo */
 .logo img {
-    height: 60px;
+    height: 80px;
+    
 }
 
-/* Menu */
 nav ul {
     list-style: none;
     display: flex;
+    background-color: black; 
+    padding: 10px;
 }
 
 nav ul li {
-    margin: 0 10px;
+    position: relative;
+    margin: 0 5px;
 }
 
 nav ul li a {
-    color: white;
     text-decoration: none;
+    color: white;
     font-weight: bold;
+    padding: 10px;
+    display: block;
 }
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(70, 129, 180, 0.174); 
+    width: 200px;
+    border-radius: 5px;
+}
+
+.dropdown-menu li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dropdown-menu a {
+    color: white;
+    padding: 10px;
+    display: block;
+    transition: background 0.3s;
+}
+
+.dropdown-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+.sub-menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: rgba(15, 58, 95, 0.678);
+    width: 200px;
+    border-radius: 5px;
+}
+
+.sub-menu a {
+    padding: 10px;
+    display: block;
+    color: white;
+    transition: background 0.3s;
+}
+
+.sub-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sub-dropdown:hover .sub-menu {
+    display: block;
+}
+
 .khung a:hover{
-    color:peru
+    color:rgb(248, 124, 0)
 }
-/* Thanh tìm kiếm */
 .search-box {
     display: flex;
     align-items: center;
     background: white;
     padding: 5px;
     border-radius: 20px;
+
 }
 
 .search-box input {
     border: none;
     outline: none;
     padding: 5px 10px;
-    width: 150px;
+    width: 250px;
 }
 
 .search-box button {
@@ -66,46 +123,189 @@ nav ul li a {
     font-size: 18px;
 }
 
-/* Đăng nhập */
 .right-menu a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    margin-right: 10px;
 }
 
-/* Giỏ hàng */
 .giohang a {
     color: red;
     text-decoration: none;
     font-weight: bold;
 }
 
-/* Banner */
 .banner {
     background: url('/image/gunbanner.jpg') no-repeat center;
     background-size: cover;
-    height: 650px;
+    height: 739px;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    
 }
-
 .banner h1 {
-    color: rgb(83, 212, 247);
-    font-size: 2em;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    font-size: 60px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    background: url('/image/gradient.png') no-repeat;
+    background-size: cover;
+    background-clip: text;
+    color: transparent;
+}
+.banner button {
+    padding:  15px 30px;
+    border: none;
+    border-radius: 40px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 200, 255, 0.42);
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+
+}
+.banner button:hover {
+    background-color: rgba(0, 166, 255, 0.628);
 }
 
-/* Chữ chạy ngang */
 marquee {
     background-color: #ffcc00;
     padding: 10px;
-    font-size: 18px;
+    height: 50px;
+    font-size: 20px;
     font-weight: bold;
     color: black;
 }
+.tonghotsell{
+    height: 700px;
+    background: url(/image/hotsell.webp) no-repeat center;
+    background-size: cover;
+}
+.tonghotsell {
+    background: url(/image/hotsell.webp) no-repeat center;
+    background-size: cover;
+    padding: 30px 0;
+}
 
-/* Footer */
+.tieude {
+    text-align: center;
+    color: white;
+    padding: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.tieude img {
+    height: 30px;
+    width: 30px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.item {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.2s;
+    border: 1px solid #ddd;
+}
+
+.item:hover {
+    transform: scale(1.03);
+}
+
+.item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.item h3 {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.item p {
+    font-size: 16px;
+    color: #e91e63;
+    font-weight: bold;
+}
+
+.item button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ff5722;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.item button:hover {
+    background-color: #d84315;
+}
+
+
+.tongsp{
+        background: url('/image/gunbackground.jpg') no-repeat center;
+        background-size: cover;
+
+}
+.sp{
+    display: flex;
+    margin: auto;
+    padding: 40px;
+}
+
+.sidebar {
+    background-color: rgba(0, 0, 0, 0.352);
+    text-align: center;
+    line-height: 2;
+    color: white;
+    flex: 1.5;
+}
+.sidebar ul li {
+    list-style: none;
+    padding-right: 30px;
+}
+
+.sidebar a{
+    text-decoration: none;
+    color: white;
+    
+}
+.content{
+    flex: 7;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.751);;
+}
+
+
+.item button:hover{
+    background-color: rgba(4, 4, 127, 0.991);
+}
+
+
+
 footer {
     background: black;
     color: white;
