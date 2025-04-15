@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng của bạn</title>
+    <link rel="stylesheet" href="giohang.css">
+</head>
+<body>
+
+    <h1>Giỏ hàng của bạn</h1>
+    <div class="cart-container">
+        <div class="cart-table-wrapper">
+            <table id="cart-items">
+                <thead>
+                    <tr>
+                        <th>Sản phẩm</th>
+                        <th>Giá</th>
+                        <th>Số lượng</th>
+                        <th>Tổng phụ</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="empty-cart">
+                        <td colspan="5">Chưa có sản phẩm nào trong giỏ hàng</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="cart-summary">
+            <div class="coupon-section">
+                <input type="text" id="coupon-code" placeholder="Mã giảm giá">
+                <button id="apply-coupon">Áp dụng</button>
+                <p id="coupon-error"></p>
+            </div>
+            <div class="total-checkout">
+                <p id="cart-total">Tổng tiền: 0đ</p>
+                <a href="/KT/giuaky.html" id="checkout-btn" class="checkout-button">Thanh Toán</a>
+            </div>
+        </div>
+    </div>
+    
+    <script src="giohang2.js"></script>
+</body>
+</html>
