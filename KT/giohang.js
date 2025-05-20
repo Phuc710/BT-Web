@@ -1,4 +1,4 @@
-// giuaky.js
+
 document.addEventListener('DOMContentLoaded', function() {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     updateCartTotal();

@@ -25,6 +25,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
         localStorage.setItem('username', username); 
 
-        window.location.href = '/KT/giuaky.html';
+        window.location.href = 'index.html';
     });
 });

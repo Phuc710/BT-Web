@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         clearInterval(checkInterval); 
                         setTimeout(() => {
                             localStorage.removeItem('cart');
-                            window.location.href = '/KT/giuaky.html';
+                            window.location.href = 'index.html';
                         }, 5000);
                         return; 
                     }
