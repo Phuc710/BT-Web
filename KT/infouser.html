@@ -34,7 +34,7 @@
 
             if (name && phone && address) {
                 const info = { name, phone, address };
-                sessionStorage.setItem('userinfo', JSON.stringify(info));
+                localStorage.setItem('userinfo', JSON.stringify(info));
                 window.location.href = "giohang.html";
             }
         });
