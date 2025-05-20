@@ -1,31 +1,27 @@
-document.addEventListener('DOMContentLoaded', function() {
-  // Quản lý hiển thị tên người dùng
-  const userDisplay = document.getElementById('user-display');
-  const loginLink = document.querySelector('.right-menu a[href="/KT/login.html"]');
-  const username = localStorage.getItem('username'); // Lấy tên người dùng từ localStorage
+document.querySelector('.hamburger').addEventListener('click', () => {
+    document.querySelector('nav ul').classList.toggle('active');
+});
 
-  if (username) {
-    userDisplay.innerHTML = `<i class="fa-regular fa-user"></i> ${username}`;
-      if (loginLink) {
-          loginLink.style.display = 'none';
-      }
-  } else {
-      userDisplay.textContent = 'SIGN IN'; 
-  }
+document.addEventListener('DOMContentLoaded', function () {
+    const userInfo = document.getElementById('user-info');
+    const quit = document.getElementById('dn');
+    const username = localStorage.getItem('username');
 
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('nav ul');
-    const navLinks = document.querySelectorAll('nav ul li a');
+    if (username) {
+        userInfo.style.display = 'inline-block';
+        quit.style.display = 'none';
+        userInfo.innerHTML = `
+            <i class="fa-regular fa-user"></i> Hi, ${username} 
+            <button id="logout" style="margin-left: 15px; padding: 7px 12px;">LOG OUT</button>
+        `;
 
-    if (hamburger && navMenu) {
-        hamburger.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
+        document.getElementById('logout').addEventListener('click', function () {
+            localStorage.removeItem('username');
+            location.reload();
         });
-
-        navLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                navMenu.classList.remove('active');
-            });
-        });
+    } else {
+        userInfo.style.display = 'none';
+        quit.style.display = 'flex';
     }
 });
+

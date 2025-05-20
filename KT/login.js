@@ -9,11 +9,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
         usernameError.textContent = '';
         passwordError.textContent = '';
-
-        // Kiểm tra input
         if (!usernameInput.value.trim()) {
             usernameError.textContent = 'Vui lòng nhập tên người dùng.';
-            event.preventDefault(); // Ngăn chặn chuyển hướng
+            event.preventDefault();
             return;
         }
 
@@ -22,13 +20,10 @@ document.addEventListener('DOMContentLoaded', function() {
             event.preventDefault(); 
             return;
         }
-
         event.preventDefault() 
-
         const username = usernameInput.value;
 
-        // Lưu tên người dùng vào localStorage hoặc sessionStorage
-        localStorage.setItem('username', username); // hoặc sessionStorage.setItem('username', username);
+        localStorage.setItem('username', username); 
 
         window.location.href = '/KT/giuaky.html';
     });

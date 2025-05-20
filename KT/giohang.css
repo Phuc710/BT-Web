@@ -3,11 +3,16 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f8f9fa;
     text-align: center;
-    padding: 0 50px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 a{
     text-decoration: none;
 }
+
 h1 {
     color: white;
     padding: 10px;
@@ -15,11 +20,40 @@ h1 {
     background-color: orangered;
     border-radius: 10px;
 }
-
+nav {
+    background-color: #000000;
+    color: rgb(0, 0, 0);
+    border-radius: 0 0 20px 20px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+nav a img {
+    height: 70px;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+}
+nav a:hover{
+    color: #ff4d4d;
+}
+nav li{
+    list-style: none;
+    margin: 0 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
 .cart-container {
     display: flex;
     flex-direction: column;
     align-items: stretch;
+    padding:0 50px;
 }
 
 .cart-summary {
@@ -52,6 +86,7 @@ h1 {
     cursor: pointer;
     font-size: 18px;
     font-weight: bold;
+    
 }
 
 #coupon-error {
@@ -85,6 +120,7 @@ h1 {
     text-align: center;
     padding: 12px 15px;
     font-size: 20px;
+
 }
 
 #cart-items img {

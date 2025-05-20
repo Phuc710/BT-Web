@@ -11,7 +11,18 @@
     
 </head>
 <body>
-    <!-- Header -->
+    <div class="up">
+        <a href="#top" >
+            <i class="fa-solid fa-arrow-up" class="up"></i>
+        </a>
+    </div>
+    <div class="message">
+            <a href="/KT/telme.html" class="shake">
+                <p>Tel Me</p>
+                <i class="fa-solid fa-phone-volume"></i>
+            </a>
+    </div>
+    
     <header>
         <div class="khung">
             <div class="hamburger">☰</div>
@@ -21,7 +32,7 @@
             <nav>
                 <ul>
                     <li><a href="/KT/giuaky.html">Trang chủ</a></li>
-                    <li><a href="">Quay thưởng</a></li>
+                    <li><a href="/KT/danhgia.html">Đánh Giá</a></li>
                     <li><a href="/KT/about.html">About Us</a></li>
                     <li><a href="#contact">Liên hệ</a></li>
                 </ul>
@@ -29,7 +40,6 @@
         </div>
     </header>
 
-    <!-- Main Content -->
     <div class="main">
         <section class="services-section">
             <h1>Dịch Vụ - BeeGuns</h1>
@@ -80,7 +90,6 @@
     </footer>
 
     <script>
-        // JavaScript cho hamburger menu
         document.querySelector('.hamburger').addEventListener('click', () => {
             document.querySelector('nav ul').classList.toggle('active');
         });

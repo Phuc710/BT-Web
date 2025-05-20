@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    let discount = 0; // Biến lưu giá trị giảm giá
+    let discount = 0; 
     const couponInput = document.getElementById('coupon-code');
     const couponError = document.getElementById('coupon-error');
 
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const row = document.createElement('tr');
             row.innerHTML = `
                 <td>
-                    <img src="${item.image}" alt="${item.name}" style="width: 150px; height: 100px; object-fit: cover;">
+                    <img src="${item.image}" alt="${item.name}" style="height: 100px; object-fit: contain;">
                     <span class="product-name">${item.name}</span>
                 </td>
                 <td>${item.price.toLocaleString('vi-VN')}đ</td>
@@ -32,20 +32,19 @@ document.addEventListener('DOMContentLoaded', function () {
             total += item.price * item.quantity;
         });
 
-        // Áp dụng giảm giá
         total -= total * discount;
 
         cartTotalP.textContent = `Tổng tiền: ${total.toLocaleString('vi-VN')}đ`;
 
-        // Gán lại sự kiện xóa
         document.querySelectorAll('.remove-btn').forEach(button => {
             button.addEventListener('click', removeItem);
         });
 
-        // Gán lại sự kiện chỉnh sửa số lượng
         document.querySelectorAll('.quantity-input').forEach(input => {
             input.addEventListener('change', updateQuantity);
         });
+
+        cartTotalP.dataset.total = total;
     }
 
     function removeItem(event) {
@@ -58,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function updateQuantity(event) {
         const index = event.target.dataset.index;
         const newQuantity = parseInt(event.target.value);
-
+            
         if (newQuantity <= 0) {
             event.target.value = 1;
             return;
@@ -72,19 +71,38 @@ document.addEventListener('DOMContentLoaded', function () {
     function applyCoupon() {
         const couponCode = couponInput.value;
 
-        if (couponCode === 'PhucBoyPho' || couponCode === 'Lisa' || couponCode === 'BigSale') {
+        if (couponCode === 'PhucBoyPho' || couponCode === 'Pino' || couponCode === 'BigSale') {
             discount = 0.5;
             couponError.textContent = 'Mã hợp lệ';
-            couponError.style.color = 'green'; // Màu xanh lá cây
+            couponError.style.color = 'green';
             couponInput.value = '';
         } else {
             discount = 0;
             couponError.textContent = `Coupon "${couponCode}" does not exist! X`;
-            couponError.style.color = 'red'; // Màu đỏ
+            couponError.style.color = 'red'; 
             couponInput.value = '';
         }
         renderCart();
     }
+    //check login
+    document.getElementById('checkout-btn').addEventListener('click', function() {
+    const totalElement = document.getElementById('cart-total');
+    const total = parseInt(totalElement.dataset.total) || 0;
+
+    if (cart.length === 0 || total <= 0) {
+        alert('Giỏ hàng của bạn đang trống !!!');
+        return;
+    }
+
+    const userInfo = JSON.parse(localStorage.getItem('userinfo'));
+
+    if (!userInfo || !userInfo.name || !userInfo.phone || !userInfo.address) {
+        alert('Vui lòng nhập thông tin cá nhân trước khi thanh toán.');
+        window.location.href = 'infouser.html';
+        return;
+    }
+    window.location.href = `payment.html?total=${total}`;
+});
 
     document.getElementById('apply-coupon').addEventListener('click', applyCoupon);
 

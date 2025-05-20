@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Viết Đánh Giá Sản Phẩm</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/KT/write-review.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="shortcut icon" href="/image/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <h1>Đánh giá từ khách hàng</h1>
+    <p><a href="/KT/danhgia.html"><i class="fa-solid fa-house"></i> Quay lại trang đánh giá</a></p>
+  </header>
+
+  <div class="container">
+    <form id="review-form">
+      <label for="product">Chọn Sản Phẩm:</label>
+      <select id="product" name="product" required>
+        <option value="AK-47">AK-47</option>
+        <option value="AWP">AWP</option>
+        <option value="Dao bướm">Dao bướm</option>
+        <option value="M4A1">M4A1</option>
+        <option value="Glock">Glock</option>
+        <option value="MP5">MP5</option>
+        <option value="M870">M870</option>
+        <option value="M1911">M1911</option>
+        <option value="SCAR-H">SCAR-H</option>
+        <option value="M14">M14</option>
+        <option value="UMP45">UMP45</option>
+        <option value="Desert Eagle">Desert Eagle</option>
+        
+      </select>
+
+      <label for="title">Tiêu Đề Đánh Giá:</label>
+      <input type="text" id="title" name="title" placeholder="Ví dụ: Sản phẩm tuyệt vời!" required>
+
+      <label for="review-text">Nội Dung Đánh Giá:</label>
+      <textarea id="review-text" name="review-text" rows="6" placeholder="Chia sẻ trải nghiệm của bạn..." required></textarea>
+
+      <label for="rating">Điểm Đánh Giá:</label>
+      <select id="rating" name="rating" required>
+        <option value="5">⭐⭐⭐⭐⭐ 5/5</option>
+        <option value="4">⭐⭐⭐⭐☆ 4/5</option>
+        <option value="3">⭐⭐⭐☆☆ 3/5</option>
+        <option value="2">⭐⭐☆☆☆ 2/5</option>
+        <option value="1">⭐☆☆☆☆ 1/5</option>
+      </select>
+
+      <label for="user-name">Tên Của Bạn:</label>
+      <input type="text" id="user-name" name="user-name" placeholder="Ví dụ: Nguyễn Văn A" required>
+
+      <label for="user-image">Hình Ảnh Đại Diện (Tùy Chọn):</label>
+      <input type="file" id="user-image" name="user-image" accept="image/*">
+
+      <button type="submit">Gửi Đánh Giá</button>
+    </form>
+  </div>
+
+  <script src="/KT/write-review.js"></script>
+</body>
+</html>

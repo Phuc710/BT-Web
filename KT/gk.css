@@ -12,6 +12,7 @@ body{
 }
 html, body {
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 hr{
     margin: 20px 0;
@@ -26,9 +27,10 @@ header {
 }
 header a:hover {
     background-color: rgba(43, 39, 35, 0.639);
-    padding: 10px;
     border-radius: 15px;
 }
+
+
 .message{
     justify-content: center;
     align-items: center;
@@ -49,6 +51,97 @@ header a:hover {
     color: rgb(35, 198, 204);
     text-decoration: none;
     font-size: 30px;
+}
+.up{
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    position: fixed;
+    bottom: 10%;
+    right: 0;
+    z-index: 1000;
+    padding: 20px;
+    border-radius: 50%;
+    font-size: 30px;
+}
+.up i{
+    color: rgb(35, 198, 204);
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: rgba(152, 150, 150, 0.638);
+    border-radius: 50%;
+}
+.right-menu {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-family: Arial, sans-serif;
+}
+
+.right-menu .btn {
+    padding: 8px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s ease;
+    font-size: 14px;
+}
+
+.sign-in {
+    background-color: #007bff;
+}
+
+.sign-in:hover {
+    background-color: #0056b3;
+}
+
+.sign-up {
+    background-color: #00bbf9;
+}
+
+.sign-up:hover {
+    background-color: #009edc;
+}
+
+#user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+#user-info i {
+    color: #1aff00;
+}
+
+#logout {
+    border: none;
+    background-color: #dc3545;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+#logout:hover {
+    background-color: #b02a37;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .right-menu {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .right-menu .btn,
+    #logout {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
 }
 
 
@@ -194,6 +287,7 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    padding: 10px;
 }
 
 /* giohang */
@@ -250,6 +344,7 @@ nav ul li a {
     bottom: 0px;
     height: 330px;
     position:absolute;
+    
 }
   
   .banner h1 {
@@ -297,6 +392,10 @@ marquee {
     font-weight: bold;
     color: black;
 }
+
+
+
+
 
 /* SALE */
 .tonghotsell {
@@ -477,6 +576,10 @@ marquee {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+}
+.Feedbacks a{
+    text-decoration: none;
+    color: black;
 }
 .Feedback-item{
     margin: 20px;
@@ -874,6 +977,7 @@ footer i{
         width: 100%;
         height: 70%;
       }
+      
 }
     
 
@@ -883,6 +987,9 @@ footer i{
         height: 180px;
         
     }
+    .section-title{
+        font-size: 25px;
+      }
     .flashsale-logo img {
         padding: 53px;
     }
@@ -895,7 +1002,9 @@ footer i{
         flex-direction: column; 
         align-items: center;
     }
-
+    .hamburger{
+        margin-right: auto;
+    }
     .subscribe input {
         width: 90%; 
     }
@@ -1094,6 +1203,7 @@ del{
     color: red;
     font-size: 20px;
 }
+
 /* chi tiet */
 .item a{
     position: absolute;
@@ -1207,4 +1317,30 @@ del{
 .details button:active {
     transform: scale(0.9);
 }
+.product-detail {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    background: rgba(73, 73, 73, 0.455);
+    z-index: 999;
+    display: none;
+}
 
+.product-detail button {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    font-size: 26px;
+    text-decoration: none;
+    color: #000000;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.product-detail button:hover {
+    color: red;
+}

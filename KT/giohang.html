@@ -5,10 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Giỏ hàng của bạn</title>
     <link rel="stylesheet" href="giohang.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="shortcut icon" href="/image/beegun.png" type="image/x-icon">
+
+
 </head>
 <body>
+    <header>
+        <nav>
+            <ul>
+                <a href=""><img src="/image/beegun.png" alt="Logo"></a>
+                <li><a href="/KT/giuaky.html">Trang chủ</a></li>
+                <li><a href="/KT/infouser.html">Thông tin cá nhân</a></li>
+            </ul>
+        </nav>
+        <h1>Giỏ hàng của bạn</h1>
 
-    <h1>Giỏ hàng của bạn</h1>
+    </header>
+    
     <div class="cart-container">
         <div class="cart-table-wrapper">
             <table id="cart-items">
@@ -17,7 +31,7 @@
                         <th>Sản phẩm</th>
                         <th>Giá</th>
                         <th>Số lượng</th>
-                        <th>Tổng phụ</th>
+                        <th>Tổng</th>
                         <th></th>
                     </tr>
                 </thead>
@@ -36,7 +50,7 @@
             </div>
             <div class="total-checkout">
                 <p id="cart-total">Tổng tiền: 0đ</p>
-                <a href="/KT/giuaky.html" id="checkout-btn" class="checkout-button">Thanh Toán</a>
+                <button id="checkout-btn" class="checkout-button">Thanh Toán</button>
             </div>
         </div>
     </div>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông tin cá nhân</title>
+    <link rel="stylesheet" href="/KT/infouser.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="shortcut icon" href="/image/beegun.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="hh">
+        <a href="/KT/giohang.html"><i class="fa-brands fa-phoenix-framework"></i></a>
+        <h1>Thông tin khách hàng</h1>
+        <form id="info-form">
+            <input type="text" id="name" placeholder="Họ và tên" required>
+            <input type="text" id="phone" placeholder="Số điện thoại" required>
+            <input type="text" id="address" placeholder="Địa chỉ nhận hàng" required>
+            <button type="submit">Xác nhận</button>
+        </form>
+    </div>
+    <div class="support">
+        <p>Lưu ý: Điền đúng thông tin để có thể nhận hàng nhanh nhất có thể</p>
+    </div>
+
+    <script>
+        document.getElementById('info-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const address = document.getElementById('address').value.trim();
+
+            if (name && phone && address) {
+                const info = { name, phone, address };
+                sessionStorage.setItem('userinfo', JSON.stringify(info));
+                window.location.href = "giohang.html";
+            }
+        });
+    </script>
+</body>
+
+</html>

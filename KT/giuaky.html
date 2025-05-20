@@ -10,15 +10,15 @@
     <link rel="stylesheet" href="/KT/gk.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
 </head>
 
 <body>
+    <!-- phone -->
     <div class="message">
-            <a href="" class="shake">
-                <p>Tel Me</p>
-                <i class="fa-solid fa-phone-volume"></i>
-            </a>
+        <a href="/KT/telme.html" class="shake">
+            <p>Tel Me</p>
+            <i class="fa-solid fa-phone-volume"></i>
+        </a>
     </div>
 
     <header>
@@ -55,8 +55,9 @@
                     </li>
                     <li><a href="#hotgun">Flash Sale</a></li>
                     <li><a href="#aboutus">About Us</a></li>
-                    <li><a href="#contact">Liên Hệ</a></li>
                     <li><a href="/KT/dichvu.html">Dịch Vụ</a></li>
+                    <li><a href="/KT/danhgia.html">Đánh Giá</a></li>
+                    <li><a href="#contact">Liên Hệ</a></li>
 
                     <li class="search-item">
                         <div class="search-container">
@@ -67,16 +68,23 @@
                 </ul>
             </nav>
             <div class="right-menu">
-                <span id="user-display" style="color: rgb(255, 255, 255); padding: 12px; border-radius: 18px; background-color: orangered; font-weight: bold; text-align: center; margin: 0 10px;"></span>
-                <a href="/KT/login.html">SIGN IN</a>
-                <a href="/KT/sign up.html" style="padding: 10px; background-color: rgba(0, 187, 249, 0.648); border-radius: 15px; text-align: center;">SIGN UP</a>
+                <span id="user-info" style="display: none;"></span>
+
+                <div id="dn">
+                    <a href="/KT/login.html">SIGN IN</a>
+                    <a href="/KT/sign up.html"
+                        style="padding: 10px; background-color: rgba(0, 187, 249, 0.648); border-radius: 15px; text-align: center;">
+                        SIGN UP
+                    </a>
+                </div>
             </div>
+
             <div class="giohang">
-                <a href="giohang.html" class="cart"><i class="fa-solid fa-cart-shopping"></i>GIỎ HÀNG: <span id="cart-total">0</span>đ</a>
+                <a href="/KT/giohang.html" class="cart"><i class="fa-solid fa-cart-shopping"></i>GIỎ HÀNG: <span
+                        id="cart-total">0</span>đ</a>
             </div>
         </div>
     </header>
-    <script src="giohang.js"></script>
 
     <div class="main">
         <!-- TRANG CHU -->
@@ -87,8 +95,16 @@
             <a href="#mua">Buy Now</a>
         </div>
 
+        <!-- di len -->
+        <div class="up">
+            <a href="#top">
+                <i class="fa-solid fa-arrow-up" class="up"></i>
+            </a>
+        </div>
+
+
         <marquee behavior="scroll" direction="left">
-            🔥 Khuyến mãi đặc biệt hôm nay - Giảm giá lên đến 50%! 🔥  
+            🔥 Khuyến mãi đặc biệt hôm nay - Giảm giá lên đến 50%! 🔥
         </marquee>
 
         <div id="hotgun">
@@ -107,10 +123,11 @@
                             <img src="/image/ak47.webp" alt="AK-47">
                             <a href="#popup1">Xem thêm</a>
                             <h3>AK-47 Rồng</h3>
-                            <p style="color: rgb(247, 237, 96);">Giá: 1.000.000đ</p>
-                            <del>1.100.000đ</del><span class="discount"> -10%</span><br>
+                            <p style="color: rgb(247, 237, 96);">Giá: 1.000đ</p>
+                            <del>10.000đ</del><span class="discount"> -10%</span><br>
 
-                            <button class="buy-btn" data-name="AK-47 Rồng" data-price="1000000" data-image="/image/ak47.webp">Mua Ngay</button>
+                            <button class="buy-btn" data-name="AK-47 Rồng" data-price="1000"
+                                data-image="/image/ak47.webp">Mua Ngay</button>
                         </div>
                         <div id="popup1" class="popup">
                             <div class="popup-content">
@@ -118,13 +135,17 @@
                                 <img src="/image/ak47.webp" alt="AK-47">
                                 <div class="details">
                                     <h2>AK-47 Rồng</h2>
-                                    <div class="price">Giá: 1.000.000đ</div>
-                                    <del>1.100.000đ</del><span class="discount"> -10%</span><br>
-                                    <div class="desc">Thiết kế rồng vàng sắc nét, nổi bật trên nền vỏ súng đen tuyền đầy mạnh mẽ. AK-47 Rồng không chỉ là vũ khí, mà còn là biểu tượng đẳng cấp trong mọi trận đấu.</div>
-                                    <div><button class="buy-btn" data-name="AK-47 Rồng" data-price="1000000" data-image="/image/ak47.webp">Mua Ngay</button></div>
+                                    <div class="price">Giá: 1.000đ</div>
+                                    <del>11.000đ</del><span class="discount"> -10%</span><br>
+                                    <div class="desc">Thiết kế rồng vàng sắc nét, nổi bật trên nền vỏ súng đen tuyền đầy
+                                        mạnh mẽ. AK-47 Rồng không chỉ là vũ khí, mà còn là biểu tượng đẳng cấp trong mọi
+                                        trận đấu.</div>
+                                    <div><button class="buy-btn" data-name="AK-47 Rồng" data-price="1000"
+                                            data-image="/image/ak47.webp">Mua Ngay</button></div>
                                 </div>
                             </div>
                         </div>
+
 
                         <div class="item">
                             <div class="flashsale-logo">
@@ -135,7 +156,8 @@
                             <h3>AWP Pink</h3>
                             <p style="color: rgb(247, 237, 96);">Giá: 2.300.000đ</p>
                             <del>2.760.000đ</del><span class="discount"> -20%</span><br>
-                            <button class="buy-btn" data-name="AWP Pink" data-price="2300000" data-image="/image/awp.webp">Mua Ngay</button>
+                            <button class="buy-btn" data-name="AWP Pink" data-price="2300000"
+                                data-image="/image/awp.webp">Mua Ngay</button>
                         </div>
                         <div id="popup2" class="popup">
                             <div class="popup-content">
@@ -145,8 +167,10 @@
                                     <h2>AWP Pink</h2>
                                     <div class="price">Giá: 2.300.000đ</div>
                                     <del>2.760.000đ</del><span class="discount"> -20%</span><br>
-                                    <div class="desc">Súng bắn tỉa AWP với lớp sơn hồng phấn nổi bật, mang phong cách độc đáo và mạnh mẽ. Lý tưởng cho các tay súng yêu thích sự khác biệt.</div>
-                                    <div><button class="buy-btn" data-name="AWP Pink" data-price="2300000" data-image="/image/awp.webp">Mua Ngay</button></div>
+                                    <div class="desc">Súng bắn tỉa AWP với lớp sơn hồng phấn nổi bật, mang phong cách
+                                        độc đáo và mạnh mẽ. Lý tưởng cho các tay súng yêu thích sự khác biệt.</div>
+                                    <div><button class="buy-btn" data-name="AWP Pink" data-price="2300000"
+                                            data-image="/image/awp.webp">Mua Ngay</button></div>
                                 </div>
                             </div>
                         </div>
@@ -155,13 +179,14 @@
                             <div class="flashsale-logo">
                                 <img src="/image/flashsale.png" alt="Hot Sale">
                             </div>
-                                <img src="/image/katana.png" alt="Katana">
-                                <a href="#popup3">Xem thêm</a>
-                                <h3>Katana Kit</h3>
-                                <p style="color: rgb(247, 237, 96);">Giá: 1.333.200đ </p>
-                                <del>1.399.881đ</del><span class="discount"> -5%</span><br>
+                            <img src="/image/katana.png" alt="Katana">
+                            <a href="#popup3">Xem thêm</a>
+                            <h3>Katana Kit</h3>
+                            <p style="color: rgb(247, 237, 96);">Giá: 1.333.200đ </p>
+                            <del>1.399.881đ</del><span class="discount"> -5%</span><br>
 
-                                <button class="buy-btn" data-name="Katana Kit" data-price="1333200" data-image="/image/katana.png">Mua Ngay</button>
+                            <button class="buy-btn" data-name="Katana Kit" data-price="1333200"
+                                data-image="/image/katana.png">Mua Ngay</button>
                         </div>
                         <div id="popup3" class="popup">
                             <div class="popup-content">
@@ -169,12 +194,13 @@
                                 <img src="/image/katana.png" alt="Katana Kit">
                                 <div class="details">
                                     <h2>Katana Kit</h2>
-                                    
                                     <div class="price">Giá: 1.333.200đ </div>
-                                <del>1.399.881đ</del><span class="discount"> -5%</span><br>
+                                    <del>1.399.881đ</del><span class="discount"> -5%</span><br>
 
-                                    <div class="desc">Katana sắc bén với thiết kế truyền thống Nhật Bản, hoàn hảo cho cả sưu tầm và sử dụng thực chiến.</div>
-                                    <div><button class="buy-btn" data-name="Katana Kit" data-price="1333200" data-image="/image/katana.png">Mua Ngay</button></div>
+                                    <div class="desc">Katana sắc bén với thiết kế truyền thống Nhật Bản, hoàn hảo cho cả
+                                        sưu tầm và sử dụng thực chiến.</div>
+                                    <div><button class="buy-btn" data-name="Katana Kit" data-price="1333200"
+                                            data-image="/image/katana.png">Mua Ngay</button></div>
                                 </div>
                             </div>
                         </div>
@@ -189,7 +215,8 @@
                             <p style="color: rgb(247, 237, 96);">Giá: 2.789.000đ </p>
                             <del>3.151.570đ</del><span class="discount"> -13%</span><br>
 
-                            <button class="buy-btn" data-name="DE Printsteam" data-price="2789000" data-image="/image/sale2.webp">Mua Ngay</button>
+                            <button class="buy-btn" data-name="DE Printsteam" data-price="2789000"
+                                data-image="/image/sale2.webp">Mua Ngay</button>
                         </div>
                         <div id="popup4" class="popup">
                             <div class="popup-content">
@@ -198,10 +225,12 @@
                                 <div class="details">
                                     <h2>DE Printsteam</h2>
                                     <div class="price">Giá: 2.789.000đ </div>
-                            <del>3.151.570đ</del><span class="discount"> -13%</span><br>
+                                    <del>3.151.570đ</del><span class="discount"> -13%</span><br>
 
-                                    <div class="desc">Desert Eagle Printsteam với họa tiết hơi nước độc đáo, mang lại vẻ ngoài mạnh mẽ và tinh tế.</div>
-                                    <div><button class="buy-btn" data-name="DE Printsteam" data-price="2789000" data-image="/image/sale2.webp">Mua Ngay</button></div>
+                                    <div class="desc">Desert Eagle Printsteam với họa tiết hơi nước độc đáo, mang lại vẻ
+                                        ngoài mạnh mẽ và tinh tế.</div>
+                                    <div><button class="buy-btn" data-name="DE Printsteam" data-price="2789000"
+                                            data-image="/image/sale2.webp">Mua Ngay</button></div>
                                 </div>
                             </div>
                         </div>
@@ -210,7 +239,9 @@
                     <!-- HOT -->
                     <div class="tieude1">
                         <hr id="hot">
-                        <h2 style="color: rgb(255, 0, 0);"><span><img src="/image/fire.png" alt=""></span> HOT <span><img src="/image/fire.png" alt=""></span></h2>
+                        <h2 style="color: rgb(255, 0, 0);"><span><img src="/image/fire.png" alt=""></span> HOT
+                            <span><img src="/image/fire.png" alt=""></span>
+                        </h2>
                     </div>
                     <div class="container" class="hot">
                         <div class="item">
@@ -221,7 +252,8 @@
                             <a href="#popup5">Xem thêm</a>
                             <h3>Talon Knife</h3>
                             <p style="color: rgb(247, 237, 96);">Giá: 5.000.000đ</p>
-                            <button class="buy-btn" data-name="Talon Knife" data-price="5000000" data-image="/image/hot1.webp">Mua Ngay</button>
+                            <button class="buy-btn" data-name="Talon Knife" data-price="5000000"
+                                data-image="/image/hot1.webp">Mua Ngay</button>
                         </div>
                         <div id="popup5" class="popup">
                             <div class="popup-content">
@@ -230,8 +262,10 @@
                                 <div class="details">
                                     <h2>Talon Knife</h2>
                                     <div class="price">Giá: 5.000.000đ</div>
-                                    <div class="desc">Dao Talon sắc bén, thiết kế sang trọng, là lựa chọn hàng đầu cho cả sưu tầm và chiến đấu.</div>
-                                    <div><button class="buy-btn" data-name="Talon Knife" data-price="5000000" data-image="/image/hot1.webp">Mua Ngay</button></div>
+                                    <div class="desc">Dao Talon sắc bén, thiết kế sang trọng, là lựa chọn hàng đầu cho
+                                        cả sưu tầm và chiến đấu.</div>
+                                    <div><button class="buy-btn" data-name="Talon Knife" data-price="5000000"
+                                            data-image="/image/hot1.webp">Mua Ngay</button></div>
                                 </div>
                             </div>
                         </div>
@@ -244,7 +278,8 @@
                             <a href="#popup6">Xem thêm</a>
                             <h3>AK-47 Inheritance</h3>
                             <p style="color: rgb(247, 237, 96);">Giá: 1.500.000đ</p>
-                            <button class="buy-btn" data-name="AK-47 Inheritance" data-price="1500000" data-image="/image/hot5.webp">Mua Ngay</button>
+                            <button class="buy-btn" data-name="AK-47 Inheritance" data-price="1500000"
+                                data-image="/image/hot5.webp">Mua Ngay</button>
                         </div>
                         <div id="popup6" class="popup">
                             <div class="popup-content">
@@ -253,8 +288,10 @@
                                 <div class="details">
                                     <h2>AK-47 Inheritance</h2>
                                     <div class="price">Giá: 1.500.000đ</div>
-                                    <div class="desc">AK-47 Inheritance mang dấu ấn cổ điển, kết hợp sức mạnh và phong cách vượt thời gian.</div>
-                                    <div><button class="buy-btn" data-name="AK-47 Inheritance" data-price="1500000" data-image="/image/hot5.webp">Mua Ngay</button></div>
+                                    <div class="desc">AK-47 Inheritance mang dấu ấn cổ điển, kết hợp sức mạnh và phong
+                                        cách vượt thời gian.</div>
+                                    <div><button class="buy-btn" data-name="AK-47 Inheritance" data-price="1500000"
+                                            data-image="/image/hot5.webp">Mua Ngay</button></div>
                                 </div>
                             </div>
                         </div>
@@ -267,7 +304,8 @@
                             <a href="#popup7">Xem thêm</a>
                             <h3>Specialist Gloves</h3>
                             <p style="color: rgb(247, 237, 96);">Giá: 2.300.000đ</p>
-                            <button class="buy-btn" data-name="Specialist Gloves" data-price="2300000" data-image="/image/hot2.webp">Mua Ngay</button>
+                            <button class="buy-btn" data-name="Specialist Gloves" data-price="2300000"
+                                data-image="/image/hot2.webp">Mua Ngay</button>
                         </div>
                         <div id="popup7" class="popup">
                             <div class="popup-content">
@@ -276,8 +314,10 @@
                                 <div class="details">
                                     <h2>Specialist Gloves</h2>
                                     <div class="price">Giá: 2.300.000đ</div>
-                                    <div class="desc">Găng tay chuyên nghiệp với độ bền cao, phong cách hiện đại, nâng tầm trải nghiệm của bạn.</div>
-                                    <div><button class="buy-btn" data-name="Specialist Gloves" data-price="2300000" data-image="/image/hot2.webp">Mua Ngay</button></div>
+                                    <div class="desc">Găng tay chuyên nghiệp với độ bền cao, phong cách hiện đại, nâng
+                                        tầm trải nghiệm của bạn.</div>
+                                    <div><button class="buy-btn" data-name="Specialist Gloves" data-price="2300000"
+                                            data-image="/image/hot2.webp">Mua Ngay</button></div>
                                 </div>
                             </div>
                         </div>
@@ -290,7 +330,8 @@
                             <a href="#popup8">Xem thêm</a>
                             <h3>M4A4 Temukau</h3>
                             <p style="color: rgb(247, 237, 96);">Giá: 3.333.200đ</p>
-                            <button class="buy-btn" data-name="M4A4 | Temukau" data-price="3333200" data-image="/image/hot3.webp">Mua Ngay</button>
+                            <button class="buy-btn" data-name="M4A4 | Temukau" data-price="3333200"
+                                data-image="/image/hot3.webp">Mua Ngay</button>
                         </div>
                         <div id="popup8" class="popup">
                             <div class="popup-content">
@@ -299,8 +340,10 @@
                                 <div class="details">
                                     <h2>M4A4 Temukau</h2>
                                     <div class="price">Giá: 3.333.200đ</div>
-                                    <div class="desc">M4A4 Temukau với họa tiết anime độc đáo, kết hợp sức mạnh và nghệ thuật trên chiến trường.</div>
-                                    <div><button class="buy-btn" data-name="M4A4 | Temukau" data-price="3333200" data-image="/image/hot3.webp">Mua Ngay</button></div>
+                                    <div class="desc">M4A4 Temukau với họa tiết anime độc đáo, kết hợp sức mạnh và nghệ
+                                        thuật trên chiến trường.</div>
+                                    <div><button class="buy-btn" data-name="M4A4 | Temukau" data-price="3333200"
+                                            data-image="/image/hot3.webp">Mua Ngay</button></div>
                                 </div>
                             </div>
                         </div>
@@ -313,7 +356,8 @@
                             <a href="#popup9">Xem thêm</a>
                             <h3>Skeleton Knife</h3>
                             <p style="color: rgb(247, 237, 96);">Giá: 789.000đ</p>
-                            <button class="buy-btn" data-name="Skeleton Knife" data-price="789000" data-image="/image/hot4.webp">Mua Ngay</button>
+                            <button class="buy-btn" data-name="Skeleton Knife" data-price="789000"
+                                data-image="/image/hot4.webp">Mua Ngay</button>
                         </div>
                         <div id="popup9" class="popup">
                             <div class="popup-content">
@@ -322,8 +366,10 @@
                                 <div class="details">
                                     <h2>Skeleton Knife</h2>
                                     <div class="price">Giá: 789.000đ</div>
-                                    <div class="desc">Dao Skeleton với thiết kế rỗng độc đáo, nhẹ nhàng nhưng đầy uy lực trong từng nhát cắt.</div>
-                                    <div><button class="buy-btn" data-name="Skeleton Knife" data-price="789000" data-image="/image/hot4.webp">Mua Ngay</button></div>
+                                    <div class="desc">Dao Skeleton với thiết kế rỗng độc đáo, nhẹ nhàng nhưng đầy uy lực
+                                        trong từng nhát cắt.</div>
+                                    <div><button class="buy-btn" data-name="Skeleton Knife" data-price="789000"
+                                            data-image="/image/hot4.webp">Mua Ngay</button></div>
                                 </div>
                             </div>
                         </div>
@@ -343,7 +389,8 @@
                             <a href="#popup10">Xem thêm</a>
                             <h3>AK-47 Rồng</h3>
                             <p>Giá: 1.000.000đ</p>
-                            <button class="buy-btn" data-name="AK-47 Rồng" data-price="1000000" data-image="/image/ak47.webp">Mua Ngay</button>
+                            <button class="buy-btn" data-name="AK-47 Rồng" data-price="1000000"
+                                data-image="/image/ak47.webp">Mua Ngay</button>
                         </div>
                         <div id="popup10" class="popup">
                             <div class="popup-content">
@@ -352,8 +399,10 @@
                                 <div class="details">
                                     <h2>AK-47 Rồng</h2>
                                     <div class="price">Giá: 1.000.000đ</div>
-                                    <div class="desc">AK-47 Rồng với họa tiết rồng vàng uy quyền, biểu tượng của sức mạnh và đẳng cấp.</div>
-                                    <div><button class="buy-btn" data-name="AK-47 Rồng" data-price="1000000" data-image="/image/ak47.webp">Mua Ngay</button></div>
+                                    <div class="desc">AK-47 Rồng với họa tiết rồng vàng uy quyền, biểu tượng của sức
+                                        mạnh và đẳng cấp.</div>
+                                    <div><button class="buy-btn" data-name="AK-47 Rồng" data-price="1000000"
+                                            data-image="/image/ak47.webp">Mua Ngay</button></div>
                                 </div>
                             </div>
                         </div>
@@ -363,7 +412,8 @@
                             <a href="#popup11">Xem thêm</a>
                             <h3>AK-47 Frontside Misty</h3>
                             <p>Giá: 1.500.000đ</p>
-                            <button class="buy-btn" data-name="AK-47 Frontside Misty" data-price="1500000" data-image="/image/st1.webp">Mua Ngay</button>
+                            <button class="buy-btn" data-name="AK-47 Frontside Misty" data-price="1500000"
+                                data-image="/image/st1.webp">Mua Ngay</button>
                         </div>
                         <div id="popup11" class="popup">
                             <div class="popup-content">
@@ -372,8 +422,10 @@
                                 <div class="details">
                                     <h2>AK-47 Frontside Misty</h2>
                                     <div class="price">Giá: 1.500.000đ</div>
-                                    <div class="desc">AK-47 Frontside Misty với lớp sương mù huyền bí, mang lại phong cách độc đáo.</div>
-                                    <div><button class="buy-btn" data-name="AK-47 Frontside Misty" data-price="1500000" data-image="/image/st1.webp">Mua Ngay</button></div>
+                                    <div class="desc">AK-47 Frontside Misty với lớp sương mù huyền bí, mang lại phong
+                                        cách độc đáo.</div>
+                                    <div><button class="buy-btn" data-name="AK-47 Frontside Misty" data-price="1500000"
+                                            data-image="/image/st1.webp">Mua Ngay</button></div>
                                 </div>
                             </div>
                         </div>
@@ -383,7 +435,8 @@
                             <a href="#popup12">Xem thêm</a>
                             <h3>SCAR-20 Bloodsport</h3>
                             <p>Giá: 450.000đ</p>
-                            <button class="buy-btn" data-name="SCAR-20 Bloodsport" data-price="450000" data-image="/image/st2.webp">Mua Ngay</button>
+                            <button class="buy-btn" data-name="SCAR-20 Bloodsport" data-price="450000"
+                                data-image="/image/st2.webp">Mua Ngay</button>
                         </div>
                         <div id="popup12" class="popup">
                             <div class="popup-content">
@@ -392,8 +445,10 @@
                                 <div class="details">
                                     <h2>SCAR-20 Bloodsport</h2>
                                     <div class="price">Giá: 450.000đ</div>
-                                    <div class="desc">SCAR-20 Bloodsport với họa tiết máu đỏ rực, thể hiện sự hung hãn trên chiến trường.</div>
-                                    <div><button class="buy-btn" data-name="SCAR-20 Bloodsport" data-price="450000" data-image="/image/st2.webp">Mua Ngay</button></div>
+                                    <div class="desc">SCAR-20 Bloodsport với họa tiết máu đỏ rực, thể hiện sự hung hãn
+                                        trên chiến trường.</div>
+                                    <div><button class="buy-btn" data-name="SCAR-20 Bloodsport" data-price="450000"
+                                            data-image="/image/st2.webp">Mua Ngay</button></div>
                                 </div>
                             </div>
                         </div>
@@ -403,7 +458,8 @@
                             <a href="#popup13">Xem thêm</a>
                             <h3>M4A4 In Living Color</h3>
                             <p>Giá: 500.000đ</p>
-                            <button class="buy-btn" data-name="M4A4 In Living Color" data-price="500000" data-image="/image/st3.webp">Mua Ngay</button>
+                            <button class="buy-btn" data-name="M4A4 In Living Color" data-price="500000"
+                                data-image="/image/st3.webp">Mua Ngay</button>
                         </div>
                         <div id="popup13" class="popup">
                             <div class="popup-content">
@@ -412,8 +468,10 @@
                                 <div class="details">
                                     <h2>M4A4 In Living Color</h2>
                                     <div class="price">Giá: 500.000đ</div>
-                                    <div class="desc">M4A4 In Living Color với màu sắc sống động, mang lại năng lượng tích cực trong trận đấu.</div>
-                                    <div><button class="buy-btn" data-name="M4A4 In Living Color" data-price="500000" data-image="/image/st3.webp">Mua Ngay</button></div>
+                                    <div class="desc">M4A4 In Living Color với màu sắc sống động, mang lại năng lượng
+                                        tích cực trong trận đấu.</div>
+                                    <div><button class="buy-btn" data-name="M4A4 In Living Color" data-price="500000"
+                                            data-image="/image/st3.webp">Mua Ngay</button></div>
                                 </div>
                             </div>
                         </div>
@@ -423,7 +481,8 @@
                             <a href="#popup14">Xem thêm</a>
                             <h3>SCAR-20 Cardiac</h3>
                             <p>Giá: 1.400.000đ</p>
-                            <button class="buy-btn" data-name="SCAR-20 Cardiac" data-price="1400000" data-image="/image/st4.webp">Mua Ngay</button>
+                            <button class="buy-btn" data-name="SCAR-20 Cardiac" data-price="1400000"
+                                data-image="/image/st4.webp">Mua Ngay</button>
                         </div>
                         <div id="popup14" class="popup">
                             <div class="popup-content">
@@ -432,8 +491,10 @@
                                 <div class="details">
                                     <h2>SCAR-20 Cardiac</h2>
                                     <div class="price">Giá: 1.400.000đ</div>
-                                    <div class="desc">SCAR-20 Cardiac với thiết kế tim mạch mạnh mẽ, thể hiện nhịp đập của chiến thắng.</div>
-                                    <div><button class="buy-btn" data-name="SCAR-20 Cardiac" data-price="1400000" data-image="/image/st4.webp">Mua Ngay</button></div>
+                                    <div class="desc">SCAR-20 Cardiac với thiết kế tim mạch mạnh mẽ, thể hiện nhịp đập
+                                        của chiến thắng.</div>
+                                    <div><button class="buy-btn" data-name="SCAR-20 Cardiac" data-price="1400000"
+                                            data-image="/image/st4.webp">Mua Ngay</button></div>
                                 </div>
                             </div>
                         </div>
@@ -443,7 +504,8 @@
                             <a href="#popup15">Xem thêm</a>
                             <h3>M4A1-S Chantico's Fire</h3>
                             <p>Giá: 2.900.000đ</p>
-                            <button class="buy-btn" data-name="M4A1-S Chantico's Fire" data-price="2900000" data-image="/image/st5.webp">Mua Ngay</button>
+                            <button class="buy-btn" data-name="M4A1-S Chantico's Fire" data-price="2900000"
+                                data-image="/image/st5.webp">Mua Ngay</button>
                         </div>
                         <div id="popup15" class="popup">
                             <div class="popup-content">
@@ -452,8 +514,10 @@
                                 <div class="details">
                                     <h2>M4A1-S Chantico's Fire</h2>
                                     <div class="price">Giá: 2.900.000đ</div>
-                                    <div class="desc">M4A1-S Chantico's Fire với ngọn lửa thần thoại, rực cháy trên từng phát đạn.</div>
-                                    <div><button class="buy-btn" data-name="M4A1-S Chantico's Fire" data-price="2900000" data-image="/image/st5.webp">Mua Ngay</button></div>
+                                    <div class="desc">M4A1-S Chantico's Fire với ngọn lửa thần thoại, rực cháy trên từng
+                                        phát đạn.</div>
+                                    <div><button class="buy-btn" data-name="M4A1-S Chantico's Fire" data-price="2900000"
+                                            data-image="/image/st5.webp">Mua Ngay</button></div>
                                 </div>
                             </div>
                         </div>
@@ -463,7 +527,8 @@
                             <a href="#popup16">Xem thêm</a>
                             <h3>AUG Eye of Zapems</h3>
                             <p>Giá: 2.350.000đ</p>
-                            <button class="buy-btn" data-name="AUG Eye of Zapems" data-price="2350000" data-image="/image/st6.webp">Mua Ngay</button>
+                            <button class="buy-btn" data-name="AUG Eye of Zapems" data-price="2350000"
+                                data-image="/image/st6.webp">Mua Ngay</button>
                         </div>
                         <div id="popup16" class="popup">
                             <div class="popup-content">
@@ -472,8 +537,10 @@
                                 <div class="details">
                                     <h2>AUG Eye of Zapems</h2>
                                     <div class="price">Giá: 2.350.000đ</div>
-                                    <div class="desc">AUG Eye of Zapems với con mắt bí ẩn, mang lại sự chính xác tuyệt đối.</div>
-                                    <div><button class="buy-btn" data-name="AUG Eye of Zapems" data-price="2350000" data-image="/image/st6.webp">Mua Ngay</button></div>
+                                    <div class="desc">AUG Eye of Zapems với con mắt bí ẩn, mang lại sự chính xác tuyệt
+                                        đối.</div>
+                                    <div><button class="buy-btn" data-name="AUG Eye of Zapems" data-price="2350000"
+                                            data-image="/image/st6.webp">Mua Ngay</button></div>
                                 </div>
                             </div>
                         </div>
@@ -483,7 +550,8 @@
                             <a href="#popup17">Xem thêm</a>
                             <h3>M4A4 | Urban DDPAT</h3>
                             <p>Giá: 1.770.000đ</p>
-                            <button class="buy-btn" data-name="M4A4 | Urban DDPAT" data-price="1770000" data-image="/image/st7.webp">Mua Ngay</button>
+                            <button class="buy-btn" data-name="M4A4 | Urban DDPAT" data-price="1770000"
+                                data-image="/image/st7.webp">Mua Ngay</button>
                         </div>
                         <div id="popup17" class="popup">
                             <div class="popup-content">
@@ -492,8 +560,10 @@
                                 <div class="details">
                                     <h2>M4A4 | Urban DDPAT</h2>
                                     <div class="price">Giá: 1.770.000đ</div>
-                                    <div class="desc">M4A4 Urban DDPAT với lớp ngụy trang đô thị, hoàn hảo cho chiến thuật đường phố.</div>
-                                    <div><button class="buy-btn" data-name="M4A4 | Urban DDPAT" data-price="1770000" data-image="/image/st7.webp">Mua Ngay</button></div>
+                                    <div class="desc">M4A4 Urban DDPAT với lớp ngụy trang đô thị, hoàn hảo cho chiến
+                                        thuật đường phố.</div>
+                                    <div><button class="buy-btn" data-name="M4A4 | Urban DDPAT" data-price="1770000"
+                                            data-image="/image/st7.webp">Mua Ngay</button></div>
                                 </div>
                             </div>
                         </div>
@@ -503,7 +573,8 @@
                             <a href="#popup18">Xem thêm</a>
                             <h3>M4A4 | Buzz Kill</h3>
                             <p>Giá: 3.350.000đ</p>
-                            <button class="buy-btn" data-name="M4A4 | Buzz Kill" data-price="3350000" data-image="/image/st8.webp">Mua Ngay</button>
+                            <button class="buy-btn" data-name="M4A4 | Buzz Kill" data-price="3350000"
+                                data-image="/image/st8.webp">Mua Ngay</button>
                         </div>
                         <div id="popup18" class="popup">
                             <div class="popup-content">
@@ -512,8 +583,10 @@
                                 <div class="details">
                                     <h2>M4A4 | Buzz Kill</h2>
                                     <div class="price">Giá: 3.350.000đ</div>
-                                    <div class="desc">M4A4 Buzz Kill với thiết kế ong vàng hung hãn, sẵn sàng tiêu diệt mọi mục tiêu.</div>
-                                    <div><button class="buy-btn" data-name="M4A4 | Buzz Kill" data-price="3350000" data-image="/image/st8.webp">Mua Ngay</button></div>
+                                    <div class="desc">M4A4 Buzz Kill với thiết kế ong vàng hung hãn, sẵn sàng tiêu diệt
+                                        mọi mục tiêu.</div>
+                                    <div><button class="buy-btn" data-name="M4A4 | Buzz Kill" data-price="3350000"
+                                            data-image="/image/st8.webp">Mua Ngay</button></div>
                                 </div>
                             </div>
                         </div>
@@ -523,7 +596,8 @@
                             <a href="#popup19">Xem thêm</a>
                             <h3>SG 553 | Integrale</h3>
                             <p>Giá: 1.350.000đ</p>
-                            <button class="buy-btn" data-name="SG 553 | Integrale" data-price="1350000" data-image="/image/st9.webp">Mua Ngay</button>
+                            <button class="buy-btn" data-name="SG 553 | Integrale" data-price="1350000"
+                                data-image="/image/st9.webp">Mua Ngay</button>
                         </div>
                         <div id="popup19" class="popup">
                             <div class="popup-content">
@@ -532,8 +606,10 @@
                                 <div class="details">
                                     <h2>SG 553 | Integrale</h2>
                                     <div class="price">Giá: 1.350.000đ</div>
-                                    <div class="desc">SG 553 Integrale với phong cách xe đua, tốc độ và sức mạnh hòa quyện.</div>
-                                    <div><button class="buy-btn" data-name="SG 553 | Integrale" data-price="1350000" data-image="/image/st9.webp">Mua Ngay</button></div>
+                                    <div class="desc">SG 553 Integrale với phong cách xe đua, tốc độ và sức mạnh hòa
+                                        quyện.</div>
+                                    <div><button class="buy-btn" data-name="SG 553 | Integrale" data-price="1350000"
+                                            data-image="/image/st9.webp">Mua Ngay</button></div>
                                 </div>
                             </div>
                         </div>
@@ -548,7 +624,8 @@
                             <a href="#popup20">Xem thêm</a>
                             <h3>Flip Knife | Gamma Doppler</h3>
                             <p>Giá: 1.540.000đ</p>
-                            <button class="buy-btn" data-name="Flip Knife | Gamma Doppler" data-price="1540000" data-image="/image/kn1.webp">Mua Ngay</button>
+                            <button class="buy-btn" data-name="Flip Knife | Gamma Doppler" data-price="1540000"
+                                data-image="/image/kn1.webp">Mua Ngay</button>
                         </div>
                         <div id="popup20" class="popup">
                             <div class="popup-content">
@@ -557,8 +634,10 @@
                                 <div class="details">
                                     <h2>Flip Knife | Gamma Doppler</h2>
                                     <div class="price">Giá: 1.540.000đ</div>
-                                    <div class="desc">Dao Flip Gamma Doppler với hiệu ứng màu sắc lấp lánh, sắc bén đến từng chi tiết.</div>
-                                    <div><button class="buy-btn" data-name="Flip Knife | Gamma Doppler" data-price="1540000" data-image="/image/kn1.webp">Mua Ngay</button></div>
+                                    <div class="desc">Dao Flip Gamma Doppler với hiệu ứng màu sắc lấp lánh, sắc bén đến
+                                        từng chi tiết.</div>
+                                    <div><button class="buy-btn" data-name="Flip Knife | Gamma Doppler"
+                                            data-price="1540000" data-image="/image/kn1.webp">Mua Ngay</button></div>
                                 </div>
                             </div>
                         </div>
@@ -568,7 +647,8 @@
                             <a href="#popup21">Xem thêm</a>
                             <h3>Gut Knife | Marble Fade</h3>
                             <p>Giá: 640.000đ</p>
-                            <button class="buy-btn" data-name="Gut Knife | Marble Fade" data-price="640000" data-image="/image/kn2.webp">Mua Ngay</button>
+                            <button class="buy-btn" data-name="Gut Knife | Marble Fade" data-price="640000"
+                                data-image="/image/kn2.webp">Mua Ngay</button>
                         </div>
                         <div id="popup21" class="popup">
                             <div class="popup-content">
@@ -577,8 +657,10 @@
                                 <div class="details">
                                     <h2>Gut Knife | Marble Fade</h2>
                                     <div class="price">Giá: 640.000đ</div>
-                                    <div class="desc">Gut Knife Marble Fade với lớp vân đá chuyển màu, đẹp mắt và đầy uy lực.</div>
-                                    <div><button class="buy-btn" data-name="Gut Knife | Marble Fade" data-price="640000" data-image="/image/kn2.webp">Mua Ngay</button></div>
+                                    <div class="desc">Gut Knife Marble Fade với lớp vân đá chuyển màu, đẹp mắt và đầy uy
+                                        lực.</div>
+                                    <div><button class="buy-btn" data-name="Gut Knife | Marble Fade" data-price="640000"
+                                            data-image="/image/kn2.webp">Mua Ngay</button></div>
                                 </div>
                             </div>
                         </div>
@@ -588,7 +670,8 @@
                             <a href="#popup22">Xem thêm</a>
                             <h3>Butterfly Knife | Scorched</h3>
                             <p>Giá: 1.500.000đ</p>
-                            <button class="buy-btn" data-name="Butterfly Knife | Scorched" data-price="1500000" data-image="/image/kn3.webp">Mua Ngay</button>
+                            <button class="buy-btn" data-name="Butterfly Knife | Scorched" data-price="1500000"
+                                data-image="/image/kn3.webp">Mua Ngay</button>
                         </div>
                         <div id="popup22" class="popup">
                             <div class="popup-content">
@@ -597,8 +680,10 @@
                                 <div class="details">
                                     <h2>Butterfly Knife | Scorched</h2>
                                     <div class="price">Giá: 1.500.000đ</div>
-                                    <div class="desc">Dao bướm Scorched với lớp cháy xém mạnh mẽ, mang đậm dấu ấn chiến đấu.</div>
-                                    <div><button class="buy-btn" data-name="Butterfly Knife | Scorched" data-price="1500000" data-image="/image/kn3.webp">Mua Ngay</button></div>
+                                    <div class="desc">Dao bướm Scorched với lớp cháy xém mạnh mẽ, mang đậm dấu ấn chiến
+                                        đấu.</div>
+                                    <div><button class="buy-btn" data-name="Butterfly Knife | Scorched"
+                                            data-price="1500000" data-image="/image/kn3.webp">Mua Ngay</button></div>
                                 </div>
                             </div>
                         </div>
@@ -608,7 +693,8 @@
                             <a href="#popup23">Xem thêm</a>
                             <h3>Karambit | Bright Water</h3>
                             <p>Giá: 1.333.000đ</p>
-                            <button class="buy-btn" data-name="Karambit | Bright Water" data-price="1333000" data-image="/image/kn4.webp">Mua Ngay</button>
+                            <button class="buy-btn" data-name="Karambit | Bright Water" data-price="1333000"
+                                data-image="/image/kn4.webp">Mua Ngay</button>
                         </div>
                         <div id="popup23" class="popup">
                             <div class="popup-content">
@@ -617,8 +703,10 @@
                                 <div class="details">
                                     <h2>Karambit | Bright Water</h2>
                                     <div class="price">Giá: 1.333.000đ</div>
-                                    <div class="desc">Karambit Bright Water với lớp sơn nước sáng, tinh tế và sắc bén như lưỡi câu.</div>
-                                    <div><button class="buy-btn" data-name="Karambit | Bright Water" data-price="1333000" data-image="/image/kn4.webp">Mua Ngay</button></div>
+                                    <div class="desc">Karambit Bright Water với lớp sơn nước sáng, tinh tế và sắc bén
+                                        như lưỡi câu.</div>
+                                    <div><button class="buy-btn" data-name="Karambit | Bright Water"
+                                            data-price="1333000" data-image="/image/kn4.webp">Mua Ngay</button></div>
                                 </div>
                             </div>
                         </div>
@@ -628,7 +716,8 @@
                             <a href="#popup24">Xem thêm</a>
                             <h3>Butterfly Knife | Lore</h3>
                             <p>Giá: 2.300.000đ</p>
-                            <button class="buy-btn" data-name="Butterfly Knife | Lore" data-price="2300000" data-image="/image/kn5.webp">Mua Ngay</button>
+                            <button class="buy-btn" data-name="Butterfly Knife | Lore" data-price="2300000"
+                                data-image="/image/kn5.webp">Mua Ngay</button>
                         </div>
                         <div id="popup24" class="popup">
                             <div class="popup-content">
@@ -637,8 +726,10 @@
                                 <div class="details">
                                     <h2>Butterfly Knife | Lore</h2>
                                     <div class="price">Giá: 2.300.000đ</div>
-                                    <div class="desc">Dao bướm Lore với thiết kế cổ điển, tinh tế, là món đồ không thể thiếu trong bộ sưu tập.</div>
-                                    <div><button class="buy-btn" data-name="Butterfly Knife | Lore" data-price="2300000" data-image="/image/kn5.webp">Mua Ngay</button></div>
+                                    <div class="desc">Dao bướm Lore với thiết kế cổ điển, tinh tế, là món đồ không thể
+                                        thiếu trong bộ sưu tập.</div>
+                                    <div><button class="buy-btn" data-name="Butterfly Knife | Lore" data-price="2300000"
+                                            data-image="/image/kn5.webp">Mua Ngay</button></div>
                                 </div>
                             </div>
                         </div>
@@ -648,7 +739,8 @@
                             <a href="#popup25">Xem thêm</a>
                             <h3>Specialist Gloves | Fade</h3>
                             <p>Giá: 4.500.000đ</p>
-                            <button class="buy-btn" data-name="Specialist Gloves | Fade" data-price="4500000" data-image="/image/kn6.webp">Mua Ngay</button>
+                            <button class="buy-btn" data-name="Specialist Gloves | Fade" data-price="4500000"
+                                data-image="/image/kn6.webp">Mua Ngay</button>
                         </div>
                         <div id="popup25" class="popup">
                             <div class="popup-content">
@@ -657,8 +749,10 @@
                                 <div class="details">
                                     <h2>Specialist Gloves | Fade</h2>
                                     <div class="price">Giá: 4.500.000đ</div>
-                                    <div class="desc">Găng tay Fade với hiệu ứng chuyển màu ấn tượng, mang lại phong cách đỉnh cao.</div>
-                                    <div><button class="buy-btn" data-name="Specialist Gloves | Fade" data-price="4500000" data-image="/image/kn6.webp">Mua Ngay</button></div>
+                                    <div class="desc">Găng tay Fade với hiệu ứng chuyển màu ấn tượng, mang lại phong
+                                        cách đỉnh cao.</div>
+                                    <div><button class="buy-btn" data-name="Specialist Gloves | Fade"
+                                            data-price="4500000" data-image="/image/kn6.webp">Mua Ngay</button></div>
                                 </div>
                             </div>
                         </div>
@@ -668,7 +762,8 @@
                             <a href="#popup26">Xem thêm</a>
                             <h3>Nomad Knife | Slaughter</h3>
                             <p>Giá: 3.550.000đ</p>
-                            <button class="buy-btn" data-name="Nomad Knife | Slaughter" data-price="3550000" data-image="/image/kn7.webp">Mua Ngay</button>
+                            <button class="buy-btn" data-name="Nomad Knife | Slaughter" data-price="3550000"
+                                data-image="/image/kn7.webp">Mua Ngay</button>
                         </div>
                         <div id="popup26" class="popup">
                             <div class="popup-content">
@@ -677,8 +772,10 @@
                                 <div class="details">
                                     <h2>Nomad Knife | Slaughter</h2>
                                     <div class="price">Giá: 3.550.000đ</div>
-                                    <div class="desc">Nomad Knife Slaughter với họa tiết máu đỏ, mang lại cảm giác tàn bạo và uy quyền.</div>
-                                    <div><button class="buy-btn" data-name="Nomad Knife | Slaughter" data-price="3550000" data-image="/image/kn7.webp">Mua Ngay</button></div>
+                                    <div class="desc">Nomad Knife Slaughter với họa tiết máu đỏ, mang lại cảm giác tàn
+                                        bạo và uy quyền.</div>
+                                    <div><button class="buy-btn" data-name="Nomad Knife | Slaughter"
+                                            data-price="3550000" data-image="/image/kn7.webp">Mua Ngay</button></div>
                                 </div>
                             </div>
                         </div>
@@ -693,7 +790,8 @@
                             <a href="#popup27">Xem thêm</a>
                             <h3>AWP | Crakow</h3>
                             <p>Giá: 2.530.000đ</p>
-                            <button class="buy-btn" data-name="AWP | Crakow" data-price="2530000" data-image="/image/op1.webp">Mua Ngay</button>
+                            <button class="buy-btn" data-name="AWP | Crakow" data-price="2530000"
+                                data-image="/image/op1.webp">Mua Ngay</button>
                         </div>
                         <div id="popup27" class="popup">
                             <div class="popup-content">
@@ -702,8 +800,10 @@
                                 <div class="details">
                                     <h2>AWP | Crakow</h2>
                                     <div class="price">Giá: 2.530.000đ</div>
-                                    <div class="desc">AWP Crakow với thiết kế cổ điển, mang lại độ chính xác tuyệt đối trong từng phát bắn.</div>
-                                    <div><button class="buy-btn" data-name="AWP | Crakow" data-price="2530000" data-image="/image/op1.webp">Mua Ngay</button></div>
+                                    <div class="desc">AWP Crakow với thiết kế cổ điển, mang lại độ chính xác tuyệt đối
+                                        trong từng phát bắn.</div>
+                                    <div><button class="buy-btn" data-name="AWP | Crakow" data-price="2530000"
+                                            data-image="/image/op1.webp">Mua Ngay</button></div>
                                 </div>
                             </div>
                         </div>
@@ -713,7 +813,8 @@
                             <a href="#popup28">Xem thêm</a>
                             <h3>G3SG1 | Dream Glade</h3>
                             <p>Giá: 3.200.000đ</p>
-                            <button class="buy-btn" data-name="G3SG1 | Dream Glade" data-price="3200000" data-image="/image/op2.webp">Mua Ngay</button>
+                            <button class="buy-btn" data-name="G3SG1 | Dream Glade" data-price="3200000"
+                                data-image="/image/op2.webp">Mua Ngay</button>
                         </div>
                         <div id="popup28" class="popup">
                             <div class="popup-content">
@@ -722,8 +823,10 @@
                                 <div class="details">
                                     <h2>G3SG1 | Dream Glade</h2>
                                     <div class="price">Giá: 3.200.000đ</div>
-                                    <div class="desc">G3SG1 Dream Glade với họa tiết giấc mơ xanh, mang lại cảm giác yên bình giữa chiến trường.</div>
-                                    <div><button class="buy-btn" data-name="G3SG1 | Dream Glade" data-price="3200000" data-image="/image/op2.webp">Mua Ngay</button></div>
+                                    <div class="desc">G3SG1 Dream Glade với họa tiết giấc mơ xanh, mang lại cảm giác yên
+                                        bình giữa chiến trường.</div>
+                                    <div><button class="buy-btn" data-name="G3SG1 | Dream Glade" data-price="3200000"
+                                            data-image="/image/op2.webp">Mua Ngay</button></div>
                                 </div>
                             </div>
                         </div>
@@ -733,7 +836,8 @@
                             <a href="#popup29">Xem thêm</a>
                             <h3>SSG 08 | Dragonfire</h3>
                             <p>Giá: 4.510.000đ</p>
-                            <button class="buy-btn" data-name="SSG 08 | Dragonfire" data-price="4510000" data-image="/image/op3.webp">Mua Ngay</button>
+                            <button class="buy-btn" data-name="SSG 08 | Dragonfire" data-price="4510000"
+                                data-image="/image/op3.webp">Mua Ngay</button>
                         </div>
                         <div id="popup29" class="popup">
                             <div class="popup-content">
@@ -742,8 +846,10 @@
                                 <div class="details">
                                     <h2>SSG 08 | Dragonfire</h2>
                                     <div class="price">Giá: 4.510.000đ</div>
-                                    <div class="desc">SSG 08 Dragonfire với ngọn lửa rồng rực cháy, sức mạnh không thể cản phá.</div>
-                                    <div><button class="buy-btn" data-name="SSG 08 | Dragonfire" data-price="4510000" data-image="/image/op3.webp">Mua Ngay</button></div>
+                                    <div class="desc">SSG 08 Dragonfire với ngọn lửa rồng rực cháy, sức mạnh không thể
+                                        cản phá.</div>
+                                    <div><button class="buy-btn" data-name="SSG 08 | Dragonfire" data-price="4510000"
+                                            data-image="/image/op3.webp">Mua Ngay</button></div>
                                 </div>
                             </div>
                         </div>
@@ -753,7 +859,8 @@
                             <a href="#popup30">Xem thêm</a>
                             <h3>G3SG1 | High Seas</h3>
                             <p>Giá: 1.800.000đ</p>
-                            <button class="buy-btn" data-name="G3SG1 | High Seas" data-price="1800000" data-image="/image/op4.webp">Mua Ngay</button>
+                            <button class="buy-btn" data-name="G3SG1 | High Seas" data-price="1800000"
+                                data-image="/image/op4.webp">Mua Ngay</button>
                         </div>
                         <div id="popup30" class="popup">
                             <div class="popup-content">
@@ -762,8 +869,10 @@
                                 <div class="details">
                                     <h2>G3SG1 | High Seas</h2>
                                     <div class="price">Giá: 1.800.000đ</div>
-                                    <div class="desc">G3SG1 High Seas với chủ đề biển cả, mạnh mẽ như những con sóng dữ.</div>
-                                    <div><button class="buy-btn" data-name="G3SG1 | High Seas" data-price="1800000" data-image="/image/op4.webp">Mua Ngay</button></div>
+                                    <div class="desc">G3SG1 High Seas với chủ đề biển cả, mạnh mẽ như những con sóng dữ.
+                                    </div>
+                                    <div><button class="buy-btn" data-name="G3SG1 | High Seas" data-price="1800000"
+                                            data-image="/image/op4.webp">Mua Ngay</button></div>
                                 </div>
                             </div>
                         </div>
@@ -773,7 +882,8 @@
                             <a href="#popup31">Xem thêm</a>
                             <h3>SCAR-20 | Cyrex</h3>
                             <p>Giá: 1.990.000đ</p>
-                            <button class="buy-btn" data-name="SCAR-20 | Cyrex" data-price="1990000" data-image="/image/op5.webp">Mua Ngay</button>
+                            <button class="buy-btn" data-name="SCAR-20 | Cyrex" data-price="1990000"
+                                data-image="/image/op5.webp">Mua Ngay</button>
                         </div>
                         <div id="popup31" class="popup">
                             <div class="popup-content">
@@ -782,8 +892,10 @@
                                 <div class="details">
                                     <h2>SCAR-20 | Cyrex</h2>
                                     <div class="price">Giá: 1.990.000đ</div>
-                                    <div class="desc">SCAR-20 Cyrex với thiết kế tương lai, mang lại độ chính xác vượt trội.</div>
-                                    <div><button class="buy-btn" data-name="SCAR-20 | Cyrex" data-price="1990000" data-image="/image/op5.webp">Mua Ngay</button></div>
+                                    <div class="desc">SCAR-20 Cyrex với thiết kế tương lai, mang lại độ chính xác vượt
+                                        trội.</div>
+                                    <div><button class="buy-btn" data-name="SCAR-20 | Cyrex" data-price="1990000"
+                                            data-image="/image/op5.webp">Mua Ngay</button></div>
                                 </div>
                             </div>
                         </div>
@@ -793,7 +905,8 @@
                             <a href="#popup32">Xem thêm</a>
                             <h3>AWP | Acheron</h3>
                             <p>Giá: 930.000đ</p>
-                            <button class="buy-btn" data-name="AWP | Acheron" data-price="930000" data-image="/image/op6.webp">Mua Ngay</button>
+                            <button class="buy-btn" data-name="AWP | Acheron" data-price="930000"
+                                data-image="/image/op6.webp">Mua Ngay</button>
                         </div>
                         <div id="popup32" class="popup">
                             <div class="popup-content">
@@ -802,8 +915,10 @@
                                 <div class="details">
                                     <h2>AWP | Acheron</h2>
                                     <div class="price">Giá: 930.000đ</div>
-                                    <div class="desc">AWP Acheron với họa tiết xương trắng, mang lại cảm giác lạnh lùng và chết chóc.</div>
-                                    <div><button class="buy-btn" data-name="AWP | Acheron" data-price="930000" data-image="/image/op6.webp">Mua Ngay</button></div>
+                                    <div class="desc">AWP Acheron với họa tiết xương trắng, mang lại cảm giác lạnh lùng
+                                        và chết chóc.</div>
+                                    <div><button class="buy-btn" data-name="AWP | Acheron" data-price="930000"
+                                            data-image="/image/op6.webp">Mua Ngay</button></div>
                                 </div>
                             </div>
                         </div>
@@ -818,7 +933,8 @@
                             <a href="#popup33">Xem thêm</a>
                             <h3>Zeus x27 | Dragon Snore</h3>
                             <p>Giá: 200.000đ</p>
-                            <button class="buy-btn" data-name="Zeus x27 | Dragon Snore" data-price="200000" data-image="/image/l1.webp">Mua Ngay</button>
+                            <button class="buy-btn" data-name="Zeus x27 | Dragon Snore" data-price="200000"
+                                data-image="/image/l1.webp">Mua Ngay</button>
                         </div>
                         <div id="popup33" class="popup">
                             <div class="popup-content">
@@ -827,8 +943,10 @@
                                 <div class="details">
                                     <h2>Zeus x27 | Dragon Snore</h2>
                                     <div class="price">Giá: 200.000đ</div>
-                                    <div class="desc">Zeus x27 Dragon Snore với sức mạnh sấm sét, hạ gục kẻ thù trong tích tắc.</div>
-                                    <div><button class="buy-btn" data-name="Zeus x27 | Dragon Snore" data-price="200000" data-image="/image/l1.webp">Mua Ngay</button></div>
+                                    <div class="desc">Zeus x27 Dragon Snore với sức mạnh sấm sét, hạ gục kẻ thù trong
+                                        tích tắc.</div>
+                                    <div><button class="buy-btn" data-name="Zeus x27 | Dragon Snore" data-price="200000"
+                                            data-image="/image/l1.webp">Mua Ngay</button></div>
                                 </div>
                             </div>
                         </div>
@@ -838,7 +956,8 @@
                             <a href="#popup34">Xem thêm</a>
                             <h3>USP-S | Cortex</h3>
                             <p>Giá: 500.000đ</p>
-                            <button class="buy-btn" data-name="USP-S | Cortex" data-price="500000" data-image="/image/l2.webp">Mua Ngay</button>
+                            <button class="buy-btn" data-name="USP-S | Cortex" data-price="500000"
+                                data-image="/image/l2.webp">Mua Ngay</button>
                         </div>
                         <div id="popup34" class="popup">
                             <div class="popup-content">
@@ -847,8 +966,10 @@
                                 <div class="details">
                                     <h2>USP-S | Cortex</h2>
                                     <div class="price">Giá: 500.000đ</div>
-                                    <div class="desc">USP-S Cortex với họa tiết não bộ, mang lại sự thông minh trong từng phát bắn.</div>
-                                    <div><button class="buy-btn" data-name="USP-S | Cortex" data-price="500000" data-image="/image/l2.webp">Mua Ngay</button></div>
+                                    <div class="desc">USP-S Cortex với họa tiết não bộ, mang lại sự thông minh trong
+                                        từng phát bắn.</div>
+                                    <div><button class="buy-btn" data-name="USP-S | Cortex" data-price="500000"
+                                            data-image="/image/l2.webp">Mua Ngay</button></div>
                                 </div>
                             </div>
                         </div>
@@ -858,7 +979,8 @@
                             <a href="#popup35">Xem thêm</a>
                             <h3>Dual Berettas | Twin Turbo</h3>
                             <p>Giá: 340.000đ</p>
-                            <button class="buy-btn" data-name="Dual Berettas | Twin Turbo" data-price="340000" data-image="/image/l3.webp">Mua Ngay</button>
+                            <button class="buy-btn" data-name="Dual Berettas | Twin Turbo" data-price="340000"
+                                data-image="/image/l3.webp">Mua Ngay</button>
                         </div>
                         <div id="popup35" class="popup">
                             <div class="popup-content">
@@ -867,8 +989,10 @@
                                 <div class="details">
                                     <h2>Dual Berettas | Twin Turbo</h2>
                                     <div class="price">Giá: 340.000đ</div>
-                                    <div class="desc">Dual Berettas Twin Turbo với phong cách xe đua, nhanh nhẹn và mạnh mẽ.</div>
-                                    <div><button class="buy-btn" data-name="Dual Berettas | Twin Turbo" data-price="340000" data-image="/image/l3.webp">Mua Ngay</button></div>
+                                    <div class="desc">Dual Berettas Twin Turbo với phong cách xe đua, nhanh nhẹn và mạnh
+                                        mẽ.</div>
+                                    <div><button class="buy-btn" data-name="Dual Berettas | Twin Turbo"
+                                            data-price="340000" data-image="/image/l3.webp">Mua Ngay</button></div>
                                 </div>
                             </div>
                         </div>
@@ -878,7 +1002,8 @@
                             <a href="#popup36">Xem thêm</a>
                             <h3>R8 Revolver | Crazy 8</h3>
                             <p>Giá: 670.000đ</p>
-                            <button class="buy-btn" data-name="R8 Revolver | Crazy 8" data-price="670000" data-image="/image/l4.webp">Mua Ngay</button>
+                            <button class="buy-btn" data-name="R8 Revolver | Crazy 8" data-price="670000"
+                                data-image="/image/l4.webp">Mua Ngay</button>
                         </div>
                         <div id="popup36" class="popup">
                             <div class="popup-content">
@@ -887,8 +1012,10 @@
                                 <div class="details">
                                     <h2>R8 Revolver | Crazy 8</h2>
                                     <div class="price">Giá: 670.000đ</div>
-                                    <div class="desc">R8 Revolver Crazy 8 với thiết kế táo bạo, mang lại sức mạnh bất ngờ.</div>
-                                    <div><button class="buy-btn" data-name="R8 Revolver | Crazy 8" data-price="670000" data-image="/image/l4.webp">Mua Ngay</button></div>
+                                    <div class="desc">R8 Revolver Crazy 8 với thiết kế táo bạo, mang lại sức mạnh bất
+                                        ngờ.</div>
+                                    <div><button class="buy-btn" data-name="R8 Revolver | Crazy 8" data-price="670000"
+                                            data-image="/image/l4.webp">Mua Ngay</button></div>
                                 </div>
                             </div>
                         </div>
@@ -903,7 +1030,8 @@
                             <a href="#popup37">Xem thêm</a>
                             <h3>MP9 | Food Chain</h3>
                             <p>Giá: 500.000đ</p>
-                            <button class="buy-btn" data-name="MP9 | Food Chain" data-price="500000" data-image="/image/smg1.webp">Mua Ngay</button>
+                            <button class="buy-btn" data-name="MP9 | Food Chain" data-price="500000"
+                                data-image="/image/smg1.webp">Mua Ngay</button>
                         </div>
                         <div id="popup37" class="popup">
                             <div class="popup-content">
@@ -912,8 +1040,10 @@
                                 <div class="details">
                                     <h2>MP9 | Food Chain</h2>
                                     <div class="price">Giá: 500.000đ</div>
-                                    <div class="desc">MP9 Food Chain với họa tiết chuỗi thức ăn, mạnh mẽ như kẻ săn mồi hàng đầu.</div>
-                                    <div><button class="buy-btn" data-name="MP9 | Food Chain" data-price="500000" data-image="/image/smg1.webp">Mua Ngay</button></div>
+                                    <div class="desc">MP9 Food Chain với họa tiết chuỗi thức ăn, mạnh mẽ như kẻ săn mồi
+                                        hàng đầu.</div>
+                                    <div><button class="buy-btn" data-name="MP9 | Food Chain" data-price="500000"
+                                            data-image="/image/smg1.webp">Mua Ngay</button></div>
                                 </div>
                             </div>
                         </div>
@@ -923,7 +1053,8 @@
                             <a href="#popup38">Xem thêm</a>
                             <h3>MAC-10 | Neon Rider</h3>
                             <p>Giá: 780.000đ</p>
-                            <button class="buy-btn" data-name="MAC-10 | Neon Rider" data-price="780000" data-image="/image/smg2.webp">Mua Ngay</button>
+                            <button class="buy-btn" data-name="MAC-10 | Neon Rider" data-price="780000"
+                                data-image="/image/smg2.webp">Mua Ngay</button>
                         </div>
                         <div id="popup38" class="popup">
                             <div class="popup-content">
@@ -932,8 +1063,10 @@
                                 <div class="details">
                                     <h2>MAC-10 | Neon Rider</h2>
                                     <div class="price">Giá: 780.000đ</div>
-                                    <div class="desc">MAC-10 Neon Rider với ánh sáng neon rực rỡ, phong cách tương lai đầy năng động.</div>
-                                    <div><button class="buy-btn" data-name="MAC-10 | Neon Rider" data-price="780000" data-image="/image/smg2.webp">Mua Ngay</button></div>
+                                    <div class="desc">MAC-10 Neon Rider với ánh sáng neon rực rỡ, phong cách tương lai
+                                        đầy năng động.</div>
+                                    <div><button class="buy-btn" data-name="MAC-10 | Neon Rider" data-price="780000"
+                                            data-image="/image/smg2.webp">Mua Ngay</button></div>
                                 </div>
                             </div>
                         </div>
@@ -943,7 +1076,8 @@
                             <a href="#popup39">Xem thêm</a>
                             <h3>MP7 | Bloodsport</h3>
                             <p>Giá: 530.000đ</p>
-                            <button class="buy-btn" data-name="MP7 | Bloodsport" data-price="530000" data-image="/image/smg3.webp">Mua Ngay</button>
+                            <button class="buy-btn" data-name="MP7 | Bloodsport" data-price="530000"
+                                data-image="/image/smg3.webp">Mua Ngay</button>
                         </div>
                         <div id="popup39" class="popup">
                             <div class="popup-content">
@@ -952,8 +1086,10 @@
                                 <div class="details">
                                     <h2>MP7 | Bloodsport</h2>
                                     <div class="price">Giá: 530.000đ</div>
-                                    <div class="desc">MP7 Bloodsport với thiết kế máu me, thể hiện sự tàn nhẫn trong từng phát đạn.</div>
-                                    <div><button class="buy-btn" data-name="MP7 | Bloodsport" data-price="530000" data-image="/image/smg3.webp">Mua Ngay</button></div>
+                                    <div class="desc">MP7 Bloodsport với thiết kế máu me, thể hiện sự tàn nhẫn trong
+                                        từng phát đạn.</div>
+                                    <div><button class="buy-btn" data-name="MP7 | Bloodsport" data-price="530000"
+                                            data-image="/image/smg3.webp">Mua Ngay</button></div>
                                 </div>
                             </div>
                         </div>
@@ -963,7 +1099,8 @@
                             <a href="#popup40">Xem thêm</a>
                             <h3>P90 | Asiimov</h3>
                             <p>Giá: 730.000đ</p>
-                            <button class="buy-btn" data-name="P90 | Asiimov" data-price="730000" data-image="/image/smg4.webp">Mua Ngay</button>
+                            <button class="buy-btn" data-name="P90 | Asiimov" data-price="730000"
+                                data-image="/image/smg4.webp">Mua Ngay</button>
                         </div>
                         <div id="popup40" class="popup">
                             <div class="popup-content">
@@ -972,8 +1109,10 @@
                                 <div class="details">
                                     <h2>P90 | Asiimov</h2>
                                     <div class="price">Giá: 730.000đ</div>
-                                    <div class="desc">P90 Asiimov với thiết kế khoa học viễn tưởng, mạnh mẽ và chính xác.</div>
-                                    <div><button class="buy-btn" data-name="P90 | Asiimov" data-price="730000" data-image="/image/smg4.webp">Mua Ngay</button></div>
+                                    <div class="desc">P90 Asiimov với thiết kế khoa học viễn tưởng, mạnh mẽ và chính
+                                        xác.</div>
+                                    <div><button class="buy-btn" data-name="P90 | Asiimov" data-price="730000"
+                                            data-image="/image/smg4.webp">Mua Ngay</button></div>
                                 </div>
                             </div>
                         </div>
@@ -985,53 +1124,59 @@
             <div class="Feedback">
                 <h1>Đánh giá từ khách hàng</h1>
                 <div class="Feedbacks">
-                    <div class="Feedback-item">
-                        <img src="/image/ak47.webp" alt="Feedback 1" class="Feedback-icon">
-                        <div class="Feedback-content">
-                            <h2>Excellent service!</h2>
-                            <p>"Sản phẩm chất lượng, giao hàng nhanh chóng!"</p>
-                            <div class="Feedback-footer">
-                                <img src="/image/tin.jpg" alt="User" class="user-img">
-                                <div>
-                                    <strong>Nguyên Quốc Tín</strong> <br>
-                                    <p>Đánh Giá</p>
+                    <a href="/KT/fb1.html">
+                        <div class="Feedback-item">
+                            <img src="/image/ak47.webp" alt="Feedback 1" class="Feedback-icon">
+                            <div class="Feedback-content">
+                                <h2>Excellent service!</h2>
+                                <p>"Sản phẩm chất lượng, giao hàng nhanh chóng!"</p>
+                                <div class="Feedback-footer">
+                                    <img src="/image/tin.jpg" alt="User" class="user-img">
+                                    <div>
+                                        <strong>Nguyên Quốc Tín</strong> <br>
+                                        <p>Đánh Giá</p>
+                                    </div>
+                                    <div>⭐⭐⭐⭐ <strong>4 / 5</strong></div>
                                 </div>
-                                <div>⭐⭐⭐⭐ <strong>4 / 5</strong></div>
                             </div>
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="Feedback-item">
-                        <img src="/image/awp.webp" alt="Feedback 1" class="Feedback-icon">
-                        <div class="Feedback-content">
-                            <h2>Excellent service!</h2>
-                            <p>"Sản phẩm chất lượng, giao hàng nhanh chóng!"</p>
-                            <div class="Feedback-footer">
-                                <img src="/image/mixi.jpg" alt="User" class="user-img">
-                                <div>
-                                    <strong>Mixigaming</strong> <br>
-                                    <p>Đánh Giá</p>
+                    <a href="/KT/fb2.html">
+                        <div class="Feedback-item">
+                            <img src="/image/awp.webp" alt="Feedback 1" class="Feedback-icon">
+                            <div class="Feedback-content">
+                                <h2>Excellent service!</h2>
+                                <p>"Sản phẩm chất lượng, giao hàng nhanh chóng!"</p>
+                                <div class="Feedback-footer">
+                                    <img src="/image/mixi.jpg" alt="User" class="user-img">
+                                    <div>
+                                        <strong>Mixigaming</strong> <br>
+                                        <p>Đánh Giá</p>
+                                    </div>
+                                    <div>⭐⭐⭐⭐⭐ <strong>5 / 5</strong></div>
                                 </div>
-                                <div>⭐⭐⭐⭐⭐ <strong>5 / 5</strong></div>
                             </div>
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="Feedback-item">
-                        <img src="/image/buom.webp" alt="Feedback 1" class="Feedback-icon">
-                        <div class="Feedback-content">
-                            <h2>Excellent service!</h2>
-                            <p>"Sản phẩm chất lượng, giao hàng nhanh chóng!"</p>
-                            <div class="Feedback-footer">
-                                <img src="/image/thay3.jpg" alt="User" class="user-img">
-                                <div>
-                                    <strong>Phan Tấn Trung</strong> <br>
-                                    <p>Đánh Giá</p>
+                    <a href="/KT/fb3.html">
+                        <div class="Feedback-item">
+                            <img src="/image/buom.webp" alt="Feedback 1" class="Feedback-icon">
+                            <div class="Feedback-content">
+                                <h2>Excellent service!</h2>
+                                <p>"Sản phẩm chất lượng, giao hàng nhanh chóng!"</p>
+                                <div class="Feedback-footer">
+                                    <img src="/image/thay3.jpg" alt="User" class="user-img">
+                                    <div>
+                                        <strong>Phan Tấn Trung</strong> <br>
+                                        <p>Đánh Giá</p>
+                                    </div>
+                                    <div>⭐⭐⭐⭐⭐ <strong>5 / 5</strong></div>
                                 </div>
-                                <div>⭐⭐⭐⭐⭐ <strong>5 / 5</strong></div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
 
                 <div class="hover" id="aboutus">
@@ -1044,10 +1189,14 @@
                             </div>
                             <div class="about-details">
                                 <h2 class="section-title">About Us</h2>
-                                <p class="text">At BeeGun, we are passionate about providing high-quality airsoft guns and model firearms for enthusiasts, collectors, and competitive players. Our mission is to offer a diverse selection of products, from rifles and handguns to accessories, ensuring that every customer finds the perfect fit for their needs. <br> Join us and experience the best in airsoft and model gun craftsmanship!</p>
+                                <p class="text">At BeeGun, we are passionate about providing high-quality airsoft guns
+                                    and model firearms for enthusiasts, collectors, and competitive players. Our mission
+                                    is to offer a diverse selection of products, from rifles and handguns to
+                                    accessories, ensuring that every customer finds the perfect fit for their needs.
+                                    <br> Join us and experience the best in airsoft and model gun craftsmanship!
+                                </p>
                                 <a href="/KT/about.html">Xem Thêm</a>
                             </div>
-                            
                         </div>
                     </section>
 
@@ -1088,15 +1237,20 @@
                         <h2>Liên Hệ</h2>
                         <a href="#"><i class="fas fa-phone"></i> SĐT: 0983 416 777</a>
                         <a href="#"><i class="fas fa-envelope"></i> Email: Phucx@shopguns.vn</a>
-                        <a href="#"><i class="fas fa-map-marker-alt"></i> Địa chỉ: 720A Điện Biên Phủ, Bình Thạnh, TP.HCM</a>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.2114364847907!2d106.71952107514596!3d10.795111889354827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527c2f8f30911%3A0x36ac5073f8c91acd!2sLandmark%2081!5e0!3m2!1svi!2s!4v1743553529993!5m2!1svi!2s" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <a href="#"><i class="fas fa-map-marker-alt"></i> Địa chỉ: 720A Điện Biên Phủ, Bình Thạnh,
+                            TP.HCM</a>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.2114364847907!2d106.71952107514596!3d10.795111889354827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527c2f8f30911%3A0x36ac5073f8c91acd!2sLandmark%2081!5e0!3m2!1svi!2s!4v1743553529993!5m2!1svi!2s"
+                            width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                     <div class="footer-right">
                         <h2>Theo Dõi Shop Chúng Tôi</h2>
-                        <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
-                        <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
-                        <a href="#"><i class="fab fa-youtube"></i> YouTube</a>
-                        <a href="#"><i class="fab fa-tiktok"></i> TikTok</a>
+                        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+                        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i>
+                            Instagram</a>
+                        <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+                        <a href="https://www.tiktok.com/" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
                     </div>
                 </div>
                 <p class="footer-bottom">© 2025 ShopGun.vn | All Rights Reserved</p>
@@ -1104,7 +1258,12 @@
             <!-- js -->
             <script src="header.js"></script>
             <script src="loc.js"></script>
-            <script src="/KT/find.js"></script>
+            <script src="find.js"></script>
+            <script src="login.js"></script>
+            <script src="giohang.js"></script>
+            <script src="giohang2.js"></script>
+            <script src="popup.js"></script>
+
         </div>
     </div>
 </body>
